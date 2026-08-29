@@ -962,7 +962,9 @@
   .hero-emergency{isolation:isolate;overflow:hidden}.hero-emergency::before{content:"";position:absolute;width:210px;height:210px;right:-90px;bottom:-95px;border:1px solid rgba(244,176,112,.5);border-radius:50%;box-shadow:0 0 0 26px rgba(244,176,112,.05),0 0 0 52px rgba(244,176,112,.03);animation:emergency-breathe 3s ease-in-out infinite;z-index:-1}.hero-emergency>*{position:relative;z-index:1}.hero-signal{position:absolute!important;z-index:0!important;right:25px;bottom:26px;width:58px;height:58px;opacity:.9}.hero-signal i{position:absolute;inset:0;border:1px solid #f4b070;border-radius:50%;animation:signal-ring 2.3s ease-out infinite}.hero-signal i:nth-child(2){animation-delay:.76s}.hero-signal i:nth-child(3){animation-delay:1.52s}.hero-signal::after{content:"";position:absolute;left:25px;top:25px;width:8px;height:8px;border-radius:50%;background:#f4b070;box-shadow:0 0 14px #f4b070}@keyframes emergency-breathe{50%{transform:scale(1.08);opacity:.7}}@keyframes signal-ring{0%{transform:scale(.2);opacity:.9}100%{transform:scale(1);opacity:0}}
   .interactive-stage{cursor:pointer;border-radius:8px;padding:5px 8px 12px;margin:0 -8px;transition:background .2s ease,transform .2s ease}.interactive-stage:hover,.interactive-stage:focus-visible,.interactive-stage.selected{background:color-mix(in srgb,var(--md-primary-container) 48%,transparent);transform:translateX(4px);outline:0}.stage-pop{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease;margin-top:0}.stage-pop>span{overflow:hidden;font-size:12.5px;line-height:1.45;color:var(--muted)}.interactive-stage.selected .stage-pop{grid-template-rows:1fr;margin-top:8px}.interactive-stage.selected .stage-pop>span{padding-top:8px;border-top:1px dashed var(--border)}
   .response-strip{background:#2f211a;color:#fff0df;overflow:hidden}.response-strip .wrap{display:grid;grid-template-columns:1.25fr repeat(3,1fr);align-items:stretch}.response-intro{padding:25px 28px 25px 0}.response-kicker{display:flex;align-items:center;gap:8px;color:#f4b070;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.response-kicker i{width:8px;height:8px;border-radius:50%;background:#67d391;box-shadow:0 0 0 0 rgba(103,211,145,.6);animation:response-pulse 1.8s infinite}.response-intro b{display:block;font-family:var(--display);font-size:20px;line-height:1.2;margin-top:8px}.response-intro p{color:#d9c4af;font-size:13px;margin-top:6px;max-width:35ch}.response-route{position:relative;isolation:isolate;border:0;border-left:1px solid rgba(255,240,223,.18);background:transparent;color:#fff0df;text-align:left;padding:22px 20px;font-family:var(--ui);overflow:hidden;transition:background .2s ease,transform .2s ease}.response-route::before{content:"";position:absolute;inset:auto -24px -36px auto;width:110px;height:110px;border:1px solid rgba(244,176,112,.28);border-radius:50%;z-index:-1;transition:transform .35s ease}.response-route:hover,.response-route:focus-visible{background:#523526;outline:0}.response-route:hover::before,.response-route:focus-visible::before{transform:scale(1.7)}.response-route .rn{display:block;font-family:var(--mono);font-size:11px;color:#f4b070;letter-spacing:.08em}.response-route b{display:block;font-size:15px;margin:8px 0 4px}.response-route small{display:block;font-size:12px;line-height:1.4;color:#d9c4af}.magnetic{will-change:transform;transition:transform .16s ease}.magnetic.is-magnetic{transform:translate(var(--mag-x,0),var(--mag-y,0)) scale(1.025)}@keyframes response-pulse{70%{box-shadow:0 0 0 8px rgba(103,211,145,0)}100%{box-shadow:0 0 0 0 rgba(103,211,145,0)}}
-  @media(max-width:900px){.response-strip .wrap{grid-template-columns:1fr 1fr}.response-intro{grid-column:1/-1;padding:22px 0}.response-route:first-of-type{border-left:0}}@media(max-width:600px){.response-strip .wrap{grid-template-columns:1fr}.response-route{border-left:0;border-top:1px solid rgba(255,240,223,.18)}.response-intro{padding-left:0}}@media(max-width:700px){.interactive-surface.is-tilting{transform:none;box-shadow:none}}@media(prefers-reduced-motion:reduce){.interactive-surface,.interactive-surface.is-tilting,.interactive-stage,.stage-pop,.magnetic,.magnetic.is-magnetic{transition:none!important;transform:none!important}.hero-emergency::before,.hero-signal i,.response-kicker i{animation:none!important}}
+  .trustgrid .tcard{position:relative;overflow:hidden}.trustgrid .tcard::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--md-primary);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.8,.2,1)}.trustgrid .tcard.in::after{transform:scaleX(1)}.trustgrid .tcard:nth-child(2)::after{background:var(--md-secondary)}.trustgrid .tcard:nth-child(3)::after{background:var(--md-tertiary)}
+  .evcount{display:inline-block;transition:transform .25s cubic-bezier(.2,1.45,.4,1),color .2s}.evcount.bump{transform:scale(1.24);color:var(--green)}.metro-h .mh{transition:transform .22s ease}.metro-h .mh:hover{transform:translateY(-5px)}.metro-h .mh:hover .mh-node{box-shadow:0 0 0 7px color-mix(in srgb,var(--md-primary) 16%,transparent)}
+  @media(max-width:900px){.response-strip .wrap{grid-template-columns:1fr 1fr}.response-intro{grid-column:1/-1;padding:22px 0}.response-route:first-of-type{border-left:0}}@media(max-width:600px){.response-strip .wrap{grid-template-columns:1fr}.response-route{border-left:0;border-top:1px solid rgba(255,240,223,.18)}.response-intro{padding-left:0}}@media(max-width:700px){.interactive-surface.is-tilting{transform:none;box-shadow:none}}@media(prefers-reduced-motion:reduce){.interactive-surface,.interactive-surface.is-tilting,.interactive-stage,.stage-pop,.magnetic,.magnetic.is-magnetic,.evcount,.metro-h .mh{transition:none!important;transform:none!important}.hero-emergency::before,.hero-signal i,.response-kicker i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -1077,19 +1079,19 @@
 var I18N={
  en:{
   gov_line:"Government of India · Ministry of Home Affairs · Indian Cyber Crime Coordination Centre (I4C)",
-  gov_line2:"Indian Cyber Crime Coordination Centre", gov_skip:"Help", brand_sub:"Report online fraud and follow it to the end",
-  login:"Sign in", nav_report:"Report fraud", nav_cases:"My cases", nav_suspect:"Check a suspect", nav_learn:"Learn", nav_help:"Help",
+  gov_line2:"Indian Cyber Crime Coordination Centre", gov_skip:"Help", brand_sub:"A clearer path from reporting to resolution",
+  login:"Sign in", nav_report:"Report what happened", nav_cases:"My cases", nav_suspect:"Check something suspicious", nav_learn:"Stay safe", nav_help:"Get help",
   f_financial:"Money fraud", f_other:"Other cyber crime", f_women:"Women and children", f_services:"Your account", f_learn:"Learning Corner",
   f_volunteer:"Cyber Volunteers", f_contact:"Contact us", f_faq:"Common questions", f_access:"Accessibility", track_id:"Track by ID",
-  foot_tag:"Your bridge from report to resolution", f_officer:"Officer sign in", f_helpline:"Helpline 1930 (toll-free)", foot_copy:"CyberSetu",
+  foot_tag:"A calmer way to report and follow up", f_officer:"Officer sign in", f_helpline:"Call 1930 (free, 24×7)", foot_copy:"CyberSetu",
   acc_text:"Text size", acc_contrast:"High contrast", svc_eyebrow:"What you can do here", s_help:"Get help", s_help_d:"Talk to us, read common questions, or find the right number to call.",
-  foot_blurb:"Report online fraud, add your evidence, and watch every step until it is resolved. Works in your language, on any device.",
+  foot_blurb:"Tell us what happened, keep your evidence together, and see what comes next. Designed to work in your language, on any device.",
   disc_left:"CyberSetu",
   disc_terms:"Terms · Privacy · Accessibility",
   hero_eyebrow:"Something happened online?",
-  hero_h:"Report online fraud. Know exactly what happens next.", hero_p:"Tell us what happened, add your proof, and follow your case all the way to action. We guide you through every step in plain language.",
-  hero_report:"Report online fraud", hero_track:"Track my case",
-  emg_t:"Lost money to fraud? Report within the golden hour.", emg_p:"Call the 24×7 helpline immediately to freeze the transaction.",
+  hero_h:"Something went wrong online? We’ll help you take the next step.", hero_p:"Tell us what happened in your own words. We’ll help you report it, keep your evidence together, and understand what comes next.",
+  hero_report:"Start a report", hero_track:"See my case",
+  emg_t:"Money just left your account? Act quickly.", emg_p:"Call 1930 straight away. The sooner you act, the better the chance of stopping the transfer.",
   emg2_t:"Lost money to a scam?", emg2_p:"Report it now. The sooner you act, the more can be recovered.", emg2_cta:"Report money fraud", emg2_note:"Reporting in the first hour gives the best chance of stopping the transfer.",
   live_t:"Live across India, today", live_view:"Open live monitor", live_reports:"complaints today", live_frozen:"frozen today", live_calls:"calls to 1930",
   proc_title:"How your report moves", proc_sub:"A clear path from the moment you report to action on your case. You are never left wondering what happens next.",
@@ -1124,34 +1126,34 @@ var I18N={
   l2t:"Digital arrest scams", l2p:"No agency will video-call to 'arrest' you or ask for money. Here's what to do.",
   l3t:"The daily fraud digest", l3p:"The newest scams reported across India, updated every day.",
   /* report */
-  rep_h:"Report online fraud", rep_p:"Just answer a few simple questions. We organise them so they are quick and easy to fill in.",
-  step_cat:"Category", step_what:"What happened", step_when:"When & where", step_who:"Who / what", step_ev:"Evidence", step_rev:"Review",
-  cat_q:"What kind of incident is this?",
-  rc_fin:"Money fraud", rc_fin_d:"You lost money or a payment was fraudulent. UPI, card, net-banking, wallet, or a loan app.",
-  rc_other:"Other cyber crime", rc_other_d:"Hacking, data theft, impersonation, online harassment, fake profiles, matrimonial or job scams.",
-  rc_women:"Crime against women or children", rc_women_d:"Obscene content, stalking, or abuse. You can report this anonymously.",
-  rc_anon:"Report anonymously", rc_anon_d:"For crimes against women and children. No identity needed to file.",
+  rep_h:"Let’s put your report together", rep_p:"Take it one step at a time. You can skip what you do not know and add evidence later.",
+  step_cat:"Choose a path", step_what:"Your story", step_when:"When & where", step_who:"Useful details", step_ev:"Your evidence", step_rev:"One last check",
+  cat_q:"Which of these feels closest to what happened?",
+  rc_fin:"I lost money", rc_fin_d:"A payment was not yours, or someone tricked you into paying by UPI, card, net banking, wallet or loan app.",
+  rc_other:"Something else happened online", rc_other_d:"A hacked account, a fake profile, harassment, data theft, or a job, matrimony or other online scam.",
+  rc_women:"I need help with online abuse", rc_women_d:"Stalking, threats, obscene content or abuse involving a woman or child. You can report without sharing your identity.",
+  rc_anon:"Report without sharing my name", rc_anon_d:"For abuse involving women and children. Start the report without revealing your identity.",
   golden_t:"You may still be able to freeze the money", golden_p:"Report the payment now. Recovery is far more likely within the first hour.",
-  what_q:"Tell us what happened", what_hint:"A short account in your own words. The portal needs at least 200 characters, and we will help you get there.",
+  what_q:"Tell us what happened, in your own words", what_hint:"There is no perfect way to write this. Share what you remember; the report needs at least 200 characters and we can help you begin.",
   what_ph:"e.g. I received a call claiming my electricity would be disconnected. I clicked the link they sent, entered my UPI PIN, and money was debited…",
-  assist_t:"Not sure how to write 200 characters?", assist_p:"Answer a few taps or speak in your language, and we will write a proper complaint in official English for you. You can edit it after.",
-  assist_voice:"Speak in your language", assist_guide:"Answer a few taps",
-  chars:"characters", char_ok:"Meets the 200-character minimum",
-  when_q:"When and where did it happen?", f_date:"Date & time of incident", f_state:"State / UT", f_platform:"Where did it happen?", plat_hint:"App, website or platform involved",
-  who_q:"Who or what was involved?", who_p:"Any detail about the fraudster helps investigators — skip what you don't have.",
+  assist_t:"Not sure how to start?", assist_p:"Use the guided starter and edit it until it sounds like you. You are always in control of what is submitted.",
+  assist_voice:"Help me start a draft", assist_guide:"Use the guided starter",
+  chars:"characters", char_ok:"That is enough detail to continue",
+  when_q:"When and where did this happen?", f_date:"When did it happen?", f_state:"Which state or UT are you in?", f_platform:"Where did it happen?", plat_hint:"The app, website or platform involved",
+  who_q:"What details do you have?", who_p:"A phone number, UPI ID, link or account detail can help. Leave any field blank if you do not have it.",
   f_susphone:"Suspect phone number", f_susupi:"Suspect UPI ID / account", f_susurl:"Website / profile URL",
   f_txn:"Transaction reference (UTR)", f_amt:"Amount lost (₹)",
   paste_sms:"Paste your bank SMS to auto-fill", autofilled:"Auto-filled from your bank SMS",
-  ev_q:"Add evidence", ev_p:"Screenshots, chats, bank statements, call recordings. JPG, PNG, PDF, DOC — up to 5 MB each.", ev_add:"Add files", ev_added:"file(s) attached", ev_skip:"I'll add evidence later",
-  rev_q:"Review your complaint", rev_p:"Please check this is correct before you submit.",
+  ev_q:"Add anything that may help", ev_p:"Screenshots, chats, bank statements and call recordings are all useful. You can add JPG, PNG, PDF or DOC files, up to 5 MB each.", ev_add:"Choose files", ev_added:"file(s) added", ev_skip:"I’ll add this later",
+  rev_q:"Take one last look", rev_p:"Check that this sounds right. You can go back and change anything before you submit.",
   rev_cat:"Category", rev_desc:"What happened", rev_when:"When", rev_state:"State", rev_platform:"Platform", rev_amt:"Amount", rev_suspect:"Suspect", rev_evidence:"Evidence",
-  consent:"I confirm the information is true to the best of my knowledge and I wish to file this complaint.", submit:"Submit complaint",
-  freeze_add:"Also send a freeze request to my bank",
-  conf_t:"Complaint registered", conf_p:"Save your complaint number. We've sent it to your registered mobile and email.",
-  conf_id:"Complaint ID", conf_download:"Download complaint (PDF)", conf_track:"Track this complaint", conf_home:"Back to home",
-  next_verify:"Continue", back:"Back",
+  consent:"I have shared this information honestly, to the best of my knowledge, and I want to submit this report.", submit:"Submit my report",
+  freeze_add:"Include a request to freeze the transfer",
+  conf_t:"Your report is saved", conf_p:"Keep this reference number somewhere safe. In this prototype, you can use it to track the sample case on this device.",
+  conf_id:"Your reference number", conf_download:"Download a copy", conf_track:"See my case", conf_home:"Back to home",
+  next_verify:"Save and continue", back:"Go back",
   /* track */
-  trk_h:"My Cases", trk_p:"Log in with your registered mobile number to see every complaint, or track a single one by its ID.",
+  trk_h:"Find your case", trk_p:"Use your mobile number to see your reports, or enter a reference number if you have one.",
   trk_tab_login:"My Cases (login)", trk_tab_id:"Track by Complaint ID",
   trk_mobile:"Registered mobile number", trk_send:"Send OTP", trk_otp:"Enter the 6-digit OTP", trk_verify:"View my cases", trk_resend:"Resend OTP",
   trk_idlabel:"Complaint ID", trk_idbtn:"Track complaint", trk_idph:"2026XXXXXXXXX or NCRP-…",
@@ -1160,21 +1162,21 @@ var I18N={
   case_h:"Complaint", case_status:"Current status", case_timeline:"Case history & status", case_details:"Complaint details", case_evidence:"Evidence submitted", case_download:"Download complaint (PDF)", case_addev:"Add more evidence", case_updates:"You'll get SMS & email updates when the status changes.",
   filed_on:"Filed on", updated:"Last updated",
   /* suspect */
-  sus_h:"Report / Check a Suspect", sus_p:"Search a phone number, UPI ID, or website against frauds reported by other citizens — or report a new suspect to I4C.",
+  sus_h:"Check something that feels suspicious", sus_p:"Search a phone number, UPI ID, email or website before you trust it—or flag it so other people can be more careful.",
   sus_tab_check:"Check before you pay", sus_tab_report:"Report a suspect",
-  sus_q:"Enter a UPI ID, number or link", sus_btn:"Check now", sus_ph:"name@bank · 98xxxxxxxx · https://…", sus_again:"Check another",
-  sus_risk:"Reported as fraud", sus_risk_s:"reports in the last 90 days. We strongly advise you not to pay or share anything.",
-  sus_safe:"No fraud reports yet", sus_safe_s:"This is not a guarantee — new scams appear daily. Stay careful.",
-  sus_note:"Checked against the citizen-reported suspect repository.",
-  sus_rep_q:"Report a suspect to I4C", sus_rep_p:"Add a fraudulent number, UPI ID or link so others are warned. Every report strengthens the shared database.",
-  sus_rep_btn:"Submit to repository",
+  sus_q:"Paste a number, UPI ID, email or link", sus_btn:"Check it", sus_ph:"name@bank · 98xxxxxxxx · https://…", sus_again:"Check something else",
+  sus_risk:"Other people have flagged this", sus_risk_s:"reports in the last 90 days. Please do not pay, share an OTP, or open anything they send.",
+  sus_safe:"No reports found yet", sus_safe_s:"That does not mean it is safe—new scams appear every day. Trust your instincts and stay careful.",
+  sus_note:"This check uses identifiers other people have reported. It is a warning tool, not a guarantee.",
+  sus_rep_q:"Help warn the next person", sus_rep_p:"Share a suspicious number, UPI ID or link. Your report can help somebody pause before they lose money.",
+  sus_rep_btn:"Share this warning",
   /* learn / help */
-  learn_h:"Learning Corner", learn_p:"Cyber-safety knowledge, advisories, and awareness material — for citizens, students and volunteers.",
-  help_h:"Help & Contact", help_p:"Reach the right support quickly. In an active fraud, call 1930 first.",
-  help_call_t:"Cyber-fraud helpline", help_call_p:"24×7, toll-free, all India. For active financial fraud.",
-  help_email_t:"Grievance / support", help_email_p:"For questions about a filed complaint or the portal.",
-  help_faq_t:"Frequently asked questions",
-  q1:"How soon should I report a financial fraud?", a1:"Immediately. Call 1930 within the first hour — the 'golden hour' — so banks can attempt to freeze the money before it is withdrawn.",
+  learn_h:"Simple ways to stay safer online", learn_p:"Short, useful guidance for everyday online situations—whether you are a citizen, student or volunteer.",
+  help_h:"Need a hand?", help_p:"Start with the option that fits your situation. If money has just been taken, call 1930 first.",
+  help_call_t:"Money fraud happening right now?", help_call_p:"Call 1930. It is free, open 24×7 across India, and is for active financial fraud.",
+  help_email_t:"Question about your report?", help_email_p:"Use email for support with a filed report or with using this prototype.",
+  help_faq_t:"Questions people often ask",
+  q1:"How quickly should I report money fraud?", a1:"As soon as you can. Call 1930 within the first hour if possible, so the bank may be able to stop or freeze the transfer.",
   q2:"What is my Complaint ID and where do I find it?", a2:"Every filed complaint gets a unique ID shown on the confirmation screen and sent by SMS/email. Use it under 'My Cases → Track by ID' any time.",
   q3:"Can I report anonymously?", a3:"Yes — for crimes against women and children you can file without revealing your identity.",
   q4:"What evidence can I attach?", a4:"Screenshots, chat exports, bank statements, call recordings and documents in JPG, PNG, PDF or DOC, up to 5 MB per file.",
@@ -1537,16 +1539,16 @@ function vHome(){
   /* Service-first home: the shared citizen tasks are visible without scrolling. */
   '<header class="civic-hero">'+SKYLINE+'<div class="wrap"><div class="civic-hero-grid">'+
     '<div class="civic-intro"><div class="hero-kicker"><span class="flag"><i style="background:#FF9933"></i><i style="background:#fff"></i><i style="background:#138808"></i></span> CyberSetu · cyber safety for India</div>'+
-      '<h1>Report a cybercrime. <em>Take the next step.</em></h1>'+
-      '<p>Submit a complaint, add evidence and see what happens next — without needing to understand the system first.</p>'+
-      '<button class="hero-primary" data-nav="report"><span class="material-symbols-rounded" aria-hidden="true">report</span> Report a cybercrime</button></div>'+
-    '<aside class="hero-emergency"><span class="hero-signal" aria-hidden="true"><i></i><i></i><i></i></span><span class="material-symbols-rounded" aria-hidden="true">phone_in_talk</span><div class="emergency-kicker">Lost money just now?</div><strong>Call <a href="tel:1930" aria-label="Call the 1930 helpline">1930</a></strong><p>It is toll-free, 24×7 and can help stop a transfer quickly.</p><button data-act="reportFinancial">Report money fraud <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button></aside>'+
+      '<h1>Something went wrong online? <em>We’ll help you take the next step.</em></h1>'+
+      '<p>Tell us what happened in your own words. We’ll help you report it, keep your evidence together, and understand what comes next.</p>'+
+      '<button class="hero-primary" data-nav="report"><span class="material-symbols-rounded" aria-hidden="true">report</span> Start a report</button></div>'+
+    '<aside class="hero-emergency"><span class="hero-signal" aria-hidden="true"><i></i><i></i><i></i></span><span class="material-symbols-rounded" aria-hidden="true">phone_in_talk</span><div class="emergency-kicker">Money just left your account?</div><strong>Call <a href="tel:1930" aria-label="Call the 1930 helpline">1930</a></strong><p>Call straight away. It’s free, open 24×7, and may help stop the transfer.</p><button data-act="reportFinancial">Report money fraud <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button></aside>'+
   '</div></div></header>'+
   '<section class="response-strip" aria-label="Explore CyberSetu response paths"><div class="wrap">'+
-    '<div class="response-intro"><div class="response-kicker"><i></i> Interactive service map</div><b>Choose the next best action.</b><p>Each route takes you directly to the right tool—no searching through a maze of government pages.</p></div>'+
-    '<button class="response-route" data-nav="report"><span class="rn">01 · REPORT</span><b>Tell us what happened</b><small>Guided reporting in plain language.</small></button>'+
-    '<button class="response-route" data-nav="suspect"><span class="rn">02 · PREVENT</span><b>Check before you pay</b><small>Look up a number, UPI ID or link.</small></button>'+
-    '<button class="response-route" data-nav="track"><span class="rn">03 · FOLLOW UP</span><b>See your case move</b><small>Open a clear, interactive timeline.</small></button>'+
+    '<div class="response-intro"><div class="response-kicker"><i></i> Start wherever you are</div><b>Pick the thing you need right now.</b><p>No forms to decode and no maze of links. We’ll take you to the right next step.</p></div>'+
+    '<button class="response-route" data-nav="report"><span class="rn">01 · REPORT</span><b>Tell us what happened</b><small>A guided report, written in plain language.</small></button>'+
+    '<button class="response-route" data-nav="suspect"><span class="rn">02 · CHECK</span><b>Check before you pay</b><small>Look up a number, UPI ID, email or link.</small></button>'+
+    '<button class="response-route" data-nav="track"><span class="rn">03 · TRACK</span><b>See where your case is</b><small>Follow every step in one clear timeline.</small></button>'+
   '</div></section>'+
   '<section class="action-ribbon"><div class="wrap"><div class="action-ribbon-label">Or continue where you left off</div><div class="action-ribbon-links">'+
     '<button data-nav="track"><span class="material-symbols-rounded" aria-hidden="true">manage_search</span><span><b>Track my case</b><small>Case status and updates</small></span><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>'+
@@ -1564,7 +1566,7 @@ function vHome(){
   '</div></section>'+
   /* WHAT HAPPENED */
   '<section class="section"><div class="wrap">'+
-    '<div class="lead"><div class="eyebrow">Start here</div><h2>What happened?</h2><p>Tell us in plain words. We’ll take you straight to the right way to report it. No cybercrime jargon needed.</p></div>'+
+    '<div class="lead"><div class="eyebrow">Start here</div><h2>Start with what happened — not a legal category.</h2><p>Choose the closest situation. You do not need to know the right cybercrime term before you begin.</p></div>'+
     '<div class="actlist">'+
       act("urgent",IC.fin,"I lost money","UPI, card, net-banking, wallet or a loan app",'data-act="reportFinancial"')+
       act("",IC.shieldw,"My account was hacked","Email, social media or a bank account taken over",'data-repcat="f_other"')+
@@ -1576,7 +1578,7 @@ function vHome(){
   '</div></section>'+
   /* SUSPECT SEARCH */
   '<section class="section paper2"><div class="wrap">'+
-    '<div class="lead"><div class="eyebrow">Before you pay or trust</div><h2>Check a number, UPI ID, email or link</h2><p>See whether an identifier has been reported by other citizens. A quick check can stop a scam before it starts.</p></div>'+
+    '<div class="lead"><div class="eyebrow">Before you pay or reply</div><h2>Not sure if it is a scam? Check first.</h2><p>Search a number, UPI ID, email or link that feels suspicious. A quick pause can save you from a much bigger problem.</p></div>'+
     '<div style="max-width:620px">'+
       '<div class="searchbar"><span class="si">'+IC.suspect+'</span><input id="homeSusQ" placeholder="e.g. 98xxxxxxxx, name@bank, or a link" aria-label="Identifier to check"><button class="btn primary" data-act="homeSusGo">Check</button></div>'+
       '<div class="exchips"><span style="font-size:12.5px;color:var(--faint);align-self:center;margin-right:2px">Try:</span>'+exchip("help-desk@okhdfc")+exchip("98xxxxxxxx")+exchip("quickrupee.app")+'</div>'+
@@ -1584,12 +1586,21 @@ function vHome(){
   '</div></section>'+
   /* CASE JOURNEY (signature) */
   '<section class="section"><div class="wrap">'+
-    '<div class="lead"><div class="eyebrow">Full transparency</div><h2>Every report follows one journey</h2><p>You always know which stage your case is at and what to expect next. This is the exact timeline you see when you track a case.</p></div>'+
+    '<div class="lead"><div class="eyebrow">No more wondering</div><h2>See what is happening with your case.</h2><p>Every report follows a clear path. You can see where it is, what has happened, and what you may need to do next.</p></div>'+
     metroH(3)+
+  '</div></section>'+
+  /* WHY THIS PROTOTYPE FEELS DIFFERENT */
+  '<section class="section paper2"><div class="wrap">'+
+    '<div class="lead"><div class="eyebrow">What CyberSetu adds</div><h2>Made for people having a difficult day.</h2><p>These small changes turn a confusing process into a calmer, clearer experience.</p></div>'+
+    '<div class="trustgrid">'+
+      '<article class="tcard reveal"><div class="ti">'+IC.report+'</div><h3>Start with your story</h3><p>People can explain what happened in everyday words. The service then guides them to the right report instead of making them decode categories first.</p></article>'+
+      '<article class="tcard reveal"><div class="ti">'+IC.track+'</div><h3>Know what happens next</h3><p>An interactive case timeline shows each stage, the latest update, and the next expectation—so a complaint never feels like it disappeared.</p></article>'+
+      '<article class="tcard reveal"><div class="ti">'+IC.suspect+'</div><h3>Prevent the next loss</h3><p>Suspect checking is one tap away, before someone sends money or opens a risky link. Prevention belongs beside reporting.</p></article>'+
+    '</div>'+
   '</div></section>'+
   /* EVIDENCE */
   '<section class="section"><div class="wrap">'+
-    '<div class="lead"><div class="eyebrow">Before you file</div><h2>Bring what you have</h2><p>Evidence helps an officer act faster. Tick what you already have. You don’t need everything, and you can add more later.</p></div>'+
+    '<div class="lead"><div class="eyebrow">Before you file</div><h2>Bring what you have. Add more later.</h2><p>A screenshot, a payment receipt, or even a phone number can help. You do not need to have everything ready before you start.</p></div>'+
     '<div class="grid2" style="grid-template-columns:1fr 320px">'+
       '<div class="evlist">'+ev("Payment receipt")+ev("Bank statement")+ev("Transaction ID / UTR")+ev("Screenshots")+ev("Chat or WhatsApp history")+ev("Email")+ev("Suspicious phone number")+ev("Website or link")+ev("Social media profile")+ev("Photo or video")+'</div>'+
       '<aside><div class="card"><div class="eyebrow" style="margin-bottom:8px">Your checklist</div><div style="font-size:34px;font-family:var(--display);color:var(--md-primary)"><span class="evcount" id="evCount">0</span> <span style="font-size:16px;color:var(--muted)">of 10 ready</span></div><p class="muted" style="font-size:13.5px;margin-top:10px;line-height:1.5">Even one or two of these strengthens your complaint. Attach them during the report.</p><button class="btn primary block" style="margin-top:16px" data-nav="report">Start my report '+ARR+'</button></div></aside>'+
@@ -1597,7 +1608,7 @@ function vHome(){
   '</div></section>'+
   /* PRIVACY */
   '<section class="section paper2"><div class="wrap">'+
-    '<div class="lead"><div class="eyebrow">Your information</div><h2>What we ask, and why</h2><p>We only ask for what helps your case, and we tell you exactly how it is used.</p></div>'+
+    '<div class="lead"><div class="eyebrow">Your information</div><h2>We will explain every question we ask.</h2><p>You should never have to guess why a service needs your details. Here is what we ask, why we ask it, and who can see it.</p></div>'+
     '<div class="ptabs" id="ptabs">'+
       '<button class="ptab on" data-ptab="0">What we ask</button><button class="ptab" data-ptab="1">Why we ask</button><button class="ptab" data-ptab="2">Who sees it</button><button class="ptab" data-ptab="3">What to expect</button>'+
     '</div>'+
@@ -1605,7 +1616,7 @@ function vHome(){
   '</div></section>'+
   /* LEARN */
   '<section class="section"><div class="wrap">'+
-    '<div class="lead"><div class="eyebrow">Stay a step ahead</div><h2>Spot the scam before it happens</h2><p>Short, plain guides to the scams doing the rounds in India right now.</p></div>'+
+    '<div class="lead"><div class="eyebrow">Stay a step ahead</div><h2>Learn the signs before a scam gets you.</h2><p>Short, practical guides for the scams people are seeing right now. No lectures—just what to notice and what to do.</p></div>'+
     '<div class="scroller">'+
       lcard("var(--slab)","Phone scams","Digital-arrest calls","No real agency video-calls to “arrest” you or demands money to stay free. Hang up and report.")+
       lcard("var(--md-secondary)","Payments","Fake UPI requests","A “collect” request takes money from you, it never sends it. Never approve one to “receive” cash.")+
@@ -2323,7 +2334,7 @@ document.addEventListener("click",function(e){
  var lmf=e.target.closest("[data-lmf]");
  if(lmf){ state.lmFilter=lmf.getAttribute("data-lmf"); document.querySelectorAll("#lmFilters .lmf").forEach(function(x){x.classList.toggle("on",x===lmf);}); lmApplyFilter(); return; }
  var evc=e.target.closest("[data-ev]");
- if(evc){ evc.classList.toggle("on"); var ecn=document.querySelectorAll(".evchk.on").length; var ecx=document.getElementById("evCount"); if(ecx)ecx.textContent=ecn; return; }
+ if(evc){ evc.classList.toggle("on"); var ecn=document.querySelectorAll(".evchk.on").length; var ecx=document.getElementById("evCount"); if(ecx){ecx.textContent=ecn;ecx.classList.remove("bump");requestAnimationFrame(function(){ecx.classList.add("bump");});setTimeout(function(){ecx.classList.remove("bump");},280);} return; }
  var xc=e.target.closest("[data-exchip]");
  if(xc){ var hq=document.getElementById("homeSusQ"); if(hq){hq.value=xc.getAttribute("data-exchip");hq.focus();} return; }
  var pt=e.target.closest("[data-ptab]");
