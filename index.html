@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="CyberSetu — report cyber fraud, track your case, and check a suspect. A Material 3 civic service concept for India.">
-<title>CyberSetu</title>
+<meta name="theme-color" content="#9e3d19">
+<meta property="og:title" content="CyberSetu — a clearer cyber-fraud reporting journey">
+<meta property="og:description" content="A Build What Moves India civic-service concept: report, track and prevent cyber fraud.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<title>CyberSetu — Cyber safety for India</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Roboto:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap">
@@ -92,6 +98,8 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
   .muted{color:var(--muted)}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .skip-link{position:fixed;left:16px;top:-80px;z-index:100;background:var(--md-primary);color:var(--md-on-primary);padding:10px 14px;border-radius:4px;font-weight:700;transition:top .15s}.skip-link:focus{top:16px}
+  .hero-emergency strong a{color:#fff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 
   /* ===== gov identity strip ===== */
   /* accessibility bar */
@@ -945,9 +953,15 @@
   :root[data-theme="dark"]{--md-primary:#ffb58e;--md-on-primary:#5a1b05;--md-primary-container:#713019;--md-on-primary-container:#ffdcc7;--md-secondary:#b7dcb6;--md-secondary-container:#294d31;--md-on-secondary-container:#d7ecd4;--md-surface:#201713;--md-sc-lowest:#291e19;--md-sc-low:#33251f;--md-sc:#3d2d26;--md-sc-high:#4a372f;--md-on-surface:#f2ddd0;--md-on-surface-variant:#dbc3b5;--md-outline-variant:#604b3f;--slab:#1e1511;--slab-2:#35231a} :root[data-theme="dark"] .civic-hero{background:#4b2c20;color:#ffe1d0} :root[data-theme="dark"] .civic-intro p{color:#f0cbbb} :root[data-theme="dark"] .hero-kicker{color:#ffb58e} :root[data-theme="dark"] .action-ribbon,:root[data-theme="dark"] header.site{background:var(--md-sc-lowest)} :root[data-theme="dark"] .action-ribbon-links button{color:var(--md-on-surface)}
   @media(max-width:900px){.civic-hero-grid{grid-template-columns:1fr;gap:30px}.civic-hero .wrap{padding-bottom:148px}.hero-emergency{max-width:430px}.action-ribbon .wrap{grid-template-columns:1fr}.action-ribbon-label{padding:17px 0}.action-ribbon-links{border-left:0;border-top:1px solid #d8c3aa}}
   @media(max-width:650px){.govbar{display:none}header.site .wrap{min-height:66px}.brand .txt b{font-size:19px}.langsel{border-left:0;padding-left:0}.civic-hero::before{width:6px}.civic-hero .wrap{padding-top:38px;padding-bottom:115px}.civic-intro h1{font-size:42px}.civic-intro p{font-size:16px}.hero-primary{width:100%;justify-content:center}.hero-emergency{max-width:none;padding:22px}.action-ribbon-links{grid-template-columns:1fr}.action-ribbon-links button{min-height:68px;border-right:0;border-bottom:1px solid #d8c3aa}.action-ribbon-links button:last-child{border-bottom:0}.section{padding:52px 0}.lead{padding-left:14px}.lead h2{font-size:27px}.page .head{padding:24px}.page .head h1{font-size:29px}}
+  /* Motion communicates system state and makes navigation feel responsive. */
+  .view{animation:page-enter .32s cubic-bezier(.2,.8,.2,1)}.reveal{opacity:0;transform:translateY(14px);transition:opacity .42s ease,transform .42s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}@keyframes page-enter{from{opacity:.01;transform:translateY(5px)}to{opacity:1;transform:none}}
+  .civic-intro .hero-kicker{animation:hero-enter .5s .04s both}.civic-intro h1{animation:hero-enter .58s .1s both}.civic-intro p{animation:hero-enter .58s .17s both}.civic-intro .hero-primary{animation:hero-enter .55s .25s both}.hero-emergency{animation:hero-enter .6s .2s both}.civic-hero .skyline{animation:skyline-rise .9s .18s both}.hero-primary{transition:transform .18s ease,box-shadow .18s ease}.hero-primary:hover{transform:translateY(-2px);box-shadow:0 5px 0 #68230d}.hero-emergency>.material-symbols-rounded{animation:phone-pulse 2.2s ease-in-out infinite}.action-ribbon-links button{transition:background .18s ease,padding .18s ease}.action-ribbon-links button:hover{padding-left:21px}.action-ribbon-links button>span:last-child{transition:transform .18s ease}.action-ribbon-links button:hover>span:last-child{transform:translateX(4px)}.officer-nav{display:inline-flex!important;align-items:center;gap:7px;margin-left:8px;border-left:1px solid rgba(255,255,255,.18)!important}.officer-nav .material-symbols-rounded{font-size:18px}.admin .opsrow,.admin .attn-card,.admin .panel,.admin .atable-wrap{animation:admin-enter .38s both}.admin .attn-card:nth-child(2){animation-delay:.06s}.admin .attn-card:nth-child(3){animation-delay:.12s}@keyframes hero-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes skyline-rise{from{opacity:0;transform:translateY(18px)}to{opacity:.72;transform:none}}@keyframes phone-pulse{0%,100%{transform:rotate(0) scale(1)}8%{transform:rotate(-10deg)}16%{transform:rotate(9deg)}24%{transform:rotate(-5deg)}32%{transform:rotate(0) scale(1.08)}}@keyframes admin-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .command-routes{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #d5c2af;background:#fff8ed}.command-routes button{padding:18px;border:0;border-right:1px solid #d5c2af;background:transparent;text-align:left;color:var(--ink);font-family:var(--ui);transition:background .18s ease}.command-routes button:last-child{border-right:0}.command-routes button:hover{background:#f3dfc8}.command-routes .material-symbols-rounded{display:block;color:#9e3d19;font-size:25px;margin-bottom:10px}.command-routes b{display:block;font-size:15px}.command-routes small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:4px}@media(max-width:900px){.officer-nav{display:none!important}.command-routes{grid-template-columns:1fr}.command-routes button{border-right:0;border-bottom:1px solid #d5c2af}.command-routes button:last-child{border-bottom:0}}@media(prefers-reduced-motion:reduce){.view,.reveal,.civic-intro .hero-kicker,.civic-intro h1,.civic-intro p,.civic-intro .hero-primary,.hero-emergency,.civic-hero .skyline,.admin .opsrow,.admin .attn-card,.admin .panel,.admin .atable-wrap{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="govbar">
   <div class="wrap">
@@ -999,8 +1013,10 @@
     <a href="#" class="nl always" data-nav="report" data-i="nav_report">Report fraud</a>
     <a href="#" class="nl" data-nav="track" data-i="nav_cases">My cases</a>
     <a href="#" class="nl" data-nav="suspect" data-i="nav_suspect">Check a suspect</a>
+    <a href="#" class="nl" data-nav="learn" data-i="nav_learn">Learn</a>
     <a href="#" class="nl" data-nav="help" data-i="nav_help">Help</a>
     <span class="sp"></span>
+    <a href="#" class="nl officer-nav" data-act="adminLogin"><span class="material-symbols-rounded" aria-hidden="true">admin_panel_settings</span> Officer console</a>
     <button class="navtoggle always" id="navtoggle" aria-label="Menu">☰</button>
   </div>
 </nav>
@@ -1032,19 +1048,21 @@
         <li><a class="fl" href="#" data-act="adminLogin" data-i="f_officer">Officer sign in</a></li>
       </ul></div>
       <div><h4 data-i="nav_help">Help</h4><ul>
+        <li><a class="fl" href="#" data-nav="learn" data-i="f_learn">Learning Corner</a></li>
         <li><a class="fl" href="#" data-nav="help" data-i="f_contact">Contact us</a></li>
         <li><a class="fl" href="#" data-nav="help" data-i="f_faq">Common questions</a></li>
-        <li><span class="fl" style="cursor:default" data-i="f_helpline">Helpline 1930 (toll-free)</span></li>
+        <li><a class="fl" href="tel:1930" data-i="f_helpline">Helpline 1930 (toll-free)</a></li>
       </ul></div>
     </div>
     <div class="disclaimer">
       <span data-i="foot_copy">CyberSetu</span>
-      <span>© 2026 · <span data-i="disc_terms">Terms · Privacy · Accessibility</span></span>
+      <span>Build What Moves India prototype · Sample data only · <span data-i="disc_terms">Terms · Privacy · Accessibility</span></span>
     </div>
   </div>
 </footer>
 
 <div class="toast" id="toast"></div>
+<input id="evidencePicker" type="file" multiple hidden accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,image/png,image/jpeg,application/pdf">
 
 <script>
 (function(){
@@ -1393,6 +1411,22 @@ var CASES=[
    desc:"Someone created a fake profile impersonating me and messaged my contacts asking for money.",
    evidence:[["Profile screenshot.png","image"],["Chat export.pdf","pdf"]]}
 ];
+/* Reports created in this prototype stay on this device, so the demo journey is continuous. */
+try{
+ var savedCases=JSON.parse(localStorage.getItem("cybersetu-demo-cases")||"[]");
+ if(Array.isArray(savedCases)) CASES=savedCases.concat(CASES);
+}catch(_e){}
+function persistCases(){
+ try{localStorage.setItem("cybersetu-demo-cases",JSON.stringify(CASES.filter(function(c){return c.demoCreated;})));}catch(_e){}
+}
+function shortDate(){return new Date().toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"});}
+function newCitizenCase(r){
+ var id=r.newId;
+ if(CASES.some(function(c){return c.id===id;})) return;
+ var files=(r.files||[]).map(function(name){return [name,/\.pdf$/i.test(name)?"pdf":"image"];});
+ CASES.unshift({id:id,cat:r.cat,amount:r.amount||"",when:(r.date||shortDate()).replace("T",", "),state:r.rstate||"Not provided",platform:r.platform||"Not provided",suspect:r.supi||r.sphone||r.surl||"Not provided",statusIdx:0,filed:shortDate(),updated:shortDate(),desc:r.statement||r.desc||"",evidence:files,demoCreated:true});
+ persistCases();
+}
 var STATUS_STEPS=["st_reg","st_fwd","st_rev","st_inv","st_act"];
 var STLABEL_EN=["Reported","Reviewed","Assigned","Investigating","Action taken"];
 var STPILL=["reg","rev","reg","inv","act"];
@@ -1437,6 +1471,12 @@ var state={view:"home", lang:"en", report:null, otpSent:false, activeCaseId:null
 var main=document.getElementById("main");
 var toastEl=document.getElementById("toast"), toastTimer;
 function toast(m){toastEl.textContent=m;toastEl.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(function(){toastEl.classList.remove("show");},2600);}
+function downloadCaseFile(){
+ var id=(state.view==="confirm"&&state.report&&state.report.newId)||state.activeCaseId||state.adminCaseId;
+ var record=CASES.filter(function(c){return c.id===id;})[0]||QUEUE.filter(function(c){return c.id===id;})[0]||CASES[0];
+ var file=new Blob([JSON.stringify({prototype:true,notice:"Sample CyberSetu record — not a real police complaint.",exportedAt:new Date().toISOString(),case:record},null,2)],{type:"application/json"});
+ var link=document.createElement("a"); link.href=URL.createObjectURL(file); link.download="CyberSetu-"+record.id.replace(/\s+/g,"-")+".json"; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(link.href); toast("Case copy downloaded");
+}
 
 /* ---------- views ---------- */
 var SKYLINE='<svg class="skyline" viewBox="0 0 1440 240" preserveAspectRatio="xMidYMax slice" aria-hidden="true">'+
@@ -1494,7 +1534,7 @@ function vHome(){
       '<h1>Report a cybercrime. <em>Take the next step.</em></h1>'+
       '<p>Submit a complaint, add evidence and see what happens next — without needing to understand the system first.</p>'+
       '<button class="hero-primary" data-nav="report"><span class="material-symbols-rounded" aria-hidden="true">report</span> Report a cybercrime</button></div>'+
-    '<aside class="hero-emergency"><span class="material-symbols-rounded" aria-hidden="true">phone_in_talk</span><div class="emergency-kicker">Lost money just now?</div><strong>Call <span>1930</span></strong><p>It is toll-free, 24×7 and can help stop a transfer quickly.</p><button data-act="reportFinancial">Report money fraud <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button></aside>'+
+    '<aside class="hero-emergency"><span class="material-symbols-rounded" aria-hidden="true">phone_in_talk</span><div class="emergency-kicker">Lost money just now?</div><strong>Call <a href="tel:1930" aria-label="Call the 1930 helpline">1930</a></strong><p>It is toll-free, 24×7 and can help stop a transfer quickly.</p><button data-act="reportFinancial">Report money fraud <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button></aside>'+
   '</div></div></header>'+
   '<section class="action-ribbon"><div class="wrap"><div class="action-ribbon-label">Or continue where you left off</div><div class="action-ribbon-links">'+
     '<button data-nav="track"><span class="material-symbols-rounded" aria-hidden="true">manage_search</span><span><b>Track my case</b><small>Case status and updates</small></span><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>'+
@@ -1674,7 +1714,7 @@ function vConfirm(){
      '<p class="muted" style="margin-top:8px;max-width:44ch;margin-left:auto;margin-right:auto">'+t("conf_p")+'</p>'+
      '<div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:20px">'+t("conf_id")+'</div>'+
      '<div class="cid">'+esc(id)+'</div>'+
-     '<div class="rowbtns" style="max-width:440px;margin:22px auto 0"><button class="btn ghost" data-act="saveDemo">'+t("conf_download")+'</button><button class="btn primary" data-act="trackNew" data-id="'+esc(id)+'">'+t("conf_track")+'</button></div>'+
+     '<div class="rowbtns" style="max-width:440px;margin:22px auto 0"><button class="btn ghost" data-act="downloadCase">'+t("conf_download")+'</button><button class="btn primary" data-act="trackNew" data-id="'+esc(id)+'">'+t("conf_track")+'</button></div>'+
      '<button class="btn ghost sm" style="margin-top:12px" data-nav="home">'+t("conf_home")+'</button>'+
    '</div></div><aside><div class="card"><h4 style="font-size:14px;margin-bottom:10px">'+t("case_status")+'</h4>'+ miniTimeline(0) +'</div></aside></div></div></div>';
 }
@@ -1748,7 +1788,7 @@ function vCase(){
        '<div class="grp-r" style="padding-left:0;padding-right:0"><span class="grp-k">Evidence</span><span class="grp-v">'+c.evidence.length+' files</span></div>'+
        '<div class="grp-r" style="padding-left:0;padding-right:0"><span class="grp-k">Messages</span><span class="grp-v">'+msgs.length+'</span></div>'+
        '<div class="grp-r" style="padding-left:0;padding-right:0;border-bottom:0"><span class="grp-k">Reported</span><span class="grp-v">'+esc(c.filed)+'</span></div>'+
-       '<div class="rowbtns" style="flex-direction:column;margin-top:16px"><button class="btn ghost block" data-act="addFile2">'+IC.file+' Add evidence</button><button class="btn ghost block" data-act="saveDemo">Download copy</button></div>'+
+       '<div class="rowbtns" style="flex-direction:column;margin-top:16px"><button class="btn ghost block" data-act="addFile2">'+IC.file+' Add evidence</button><button class="btn ghost block" data-act="downloadCase">Download copy</button></div>'+
      '</div>'+
      '<div class="card" style="margin-top:16px"><h4 style="font-size:13px;margin-bottom:10px">Evidence you submitted</h4>'+ev+'</div>'+
      '<div class="card" style="margin-top:16px"><div class="note" style="margin:0">'+IC.mail+'<span>You will get an SMS whenever this status changes.</span></div></div>'+
@@ -1797,8 +1837,8 @@ function vHelp(){
  var faq=[["q1","a1"],["q2","a2"],["q3","a3"],["q4","a4"],["q5","a5"]].map(function(f){return '<details><summary>'+t(f[0])+'</summary><div class="a">'+t(f[1])+'</div></details>';}).join("");
  return '<div class="view"><div class="wrap page"><div class="head"><h1>'+t("help_h")+'</h1><p>'+t("help_p")+'</p></div>'+
    '<div class="helpgrid" style="margin-bottom:26px">'+
-     '<div class="helpcard"><div class="hi" style="background:var(--red-soft);color:var(--red)">'+IC.phone+'</div><h3>'+t("help_call_t")+'</h3><p>'+t("help_call_p")+'</p><div class="big">1930</div></div>'+
-     '<div class="helpcard"><div class="hi" style="background:var(--navy-soft);color:var(--navy)">'+IC.mail+'</div><h3>'+t("help_email_t")+'</h3><p>'+t("help_email_p")+'</p><button class="btn ghost sm" style="margin-top:12px" data-act="saveDemo">help@cybersetu.in</button></div>'+
+     '<div class="helpcard"><div class="hi" style="background:var(--red-soft);color:var(--red)">'+IC.phone+'</div><h3>'+t("help_call_t")+'</h3><p>'+t("help_call_p")+'</p><a class="big" href="tel:1930" aria-label="Call the 1930 helpline">1930</a></div>'+
+     '<div class="helpcard"><div class="hi" style="background:var(--navy-soft);color:var(--navy)">'+IC.mail+'</div><h3>'+t("help_email_t")+'</h3><p>'+t("help_email_p")+'</p><a class="btn ghost sm" style="margin-top:12px" href="mailto:help@cybersetu.in">help@cybersetu.in</a></div>'+
    '</div>'+
    '<h3 style="font-size:18px;margin-bottom:14px">'+t("help_faq_t")+'</h3><div class="faq">'+faq+'</div>'+
  '</div></div>';
@@ -1909,6 +1949,11 @@ function vAdminDash(){
    '<div class="asec"><div class="asec-h">'+AIC.people+'<h2>My workload</h2><span class="sp"></span><a class="more" data-admin="queue">Open my cases →</a></div>'+
      '<div class="opsrow" style="grid-template-columns:repeat(4,1fr)">'+cell(mineActive,"Active cases")+cell(mineHigh,"High priority","warn")+cell(qby(function(c){return c.officer===OFFICER.name&&c.statusIdx===1;}).length,"Awaiting action")+cell(qby(function(c){return c.officer===OFFICER.name&&c.statusIdx===3;}).length,"Investigating")+'</div>'+
    '</div>'+
+   '<div class="asec"><div class="asec-h"><span class="material-symbols-rounded" style="color:var(--md-primary)">radar</span><h2>Command tools</h2><span class="sp"></span><span class="ops-note">Operational intelligence</span></div><div class="command-routes">'+
+     '<button data-admin="live"><span class="material-symbols-rounded" aria-hidden="true">sensors</span><b>Live triage</b><small>Watch incoming reports, priority signals and officer activity as they update.</small></button>'+
+     '<button data-admin="suspects"><span class="material-symbols-rounded" aria-hidden="true">hub</span><b>Identifier intelligence</b><small>Connect repeat phone numbers, UPI IDs, links and case patterns.</small></button>'+
+     '<button data-admin="analytics"><span class="material-symbols-rounded" aria-hidden="true">query_stats</span><b>Recovery performance</b><small>See response volume, channel patterns and funds-freeze outcomes.</small></button>'+
+   '</div></div>'+
    '<div class="asec"><div class="asec-h">'+AIC.list+'<h2>Priority queue</h2><span class="sp"></span><a class="more" data-admin="queue">View all '+total+' →</a></div>'+
      '<div class="intake">'+qTableWrap(QUEUE.slice().sort(function(a,b){var p={high:0,med:1,low:2};return p[a.priority]-p[b.priority];}).slice(0,6))+'</div>'+
    '</div>');
@@ -1987,7 +2032,7 @@ function vAdminCase(){
          (fin?'<button class="btn tonal block sm" data-act="admFreeze" data-id="'+esc(c.id)+'">Send bank freeze request</button>':'')+
          '<button class="btn ghost block sm" data-act="escalate" data-id="'+esc(c.id)+'">Escalate case</button>'+
          '<button class="btn ghost block sm" data-act="requestInfo" data-id="'+esc(c.id)+'">Request info from citizen</button>'+
-         '<button class="btn text block sm" data-act="saveDemo">Export case file</button>'+
+       '<button class="btn text block sm" data-act="downloadCase">Export case file</button>'+
        '</div></div></div>'+
    '</aside></div>');
 }
@@ -2095,7 +2140,7 @@ function startHomeTick(){stopHomeTick(); if(reduceMotion())return; var v={r:1286
  _hometick=setInterval(function(){var e1=document.getElementById("ls1"),e3=document.getElementById("ls3");if(!e1){stopHomeTick();return;}if(Math.random()<.7){v.r++;e1.textContent=v.r.toLocaleString("en-IN");}if(Math.random()<.55){v.c++;e3.textContent=v.c;}},2600);}
 function stopHomeTick(){if(_hometick){clearInterval(_hometick);_hometick=null;}}
 
-var VIEWS={home:vHome,report:vReport,confirm:vConfirm,track:vTrack,dashboard:vDashboard,case:vCase,suspect:vSuspect,help:vHelp,
+var VIEWS={home:vHome,report:vReport,confirm:vConfirm,track:vTrack,dashboard:vDashboard,case:vCase,suspect:vSuspect,learn:vLearn,help:vHelp,
  adminLogin:vAdminLogin,admin_dash:vAdminDash,admin_queue:vAdminQueue,admin_case:vAdminCase,admin_suspects:vAdminSuspects,admin_analytics:vAdminAnalytics,admin_live:vAdminLive};
 function render(){
  main.innerHTML=(VIEWS[state.view]||vHome)();
@@ -2179,7 +2224,7 @@ function setupReveal(){
  });
 }
 function setActiveNav(){
- var map={report:"report",confirm:"report",track:"track",dashboard:"track",case:"track",suspect:"suspect",live:"live",learn:"learn",help:"help"};
+ var map={report:"report",confirm:"report",track:"track",dashboard:"track",case:"track",suspect:"suspect",learn:"learn",help:"help"};
  document.querySelectorAll("nav.main a.nl").forEach(function(a){a.classList.toggle("active", a.getAttribute("data-nav")===map[state.view]);});
 }
 function go(v){state.view=v;render();}
@@ -2187,6 +2232,12 @@ function rnd(n){var s="";for(var i=0;i<n;i++)s+=Math.floor(Math.random()*10);ret
 function findQ(id){for(var i=0;i<QUEUE.length;i++)if(QUEUE[i].id===id)return QUEUE[i];return null;}
 document.addEventListener("change",function(e){
  var s=e.target;
+ if(s.id==="evidencePicker"){
+   var files=Array.prototype.slice.call(s.files||[]); if(!files.length)return;
+   if(state.report){ state.report.files=(state.report.files||[]).concat(files.map(function(f){return f.name;})); }
+   else { var active=CASES.filter(function(c){return c.id===state.activeCaseId;})[0]; if(active){active.evidence=(active.evidence||[]).concat(files.map(function(f){return [f.name,/\.pdf$/i.test(f.name)?"pdf":"image"];}));persistCases();} }
+   s.value=""; render(); toast(files.length+" evidence file"+(files.length>1?"s":"")+" added"); return;
+ }
  if(s.getAttribute&&s.getAttribute("data-act")==="statusChange"){
    var id=s.getAttribute("data-id"), c=findQ(id); if(!c)return;
    var ni=parseInt(s.value,10); if(ni===c.statusIdx)return;
@@ -2248,8 +2299,9 @@ document.addEventListener("click",function(e){
  if(act==="admAssign"){ var aid=b.getAttribute("data-id"); var acs=findQ(aid); if(acs){ acs.officer=OFFICER.name; if(!state.auditLog)state.auditLog={}; if(!state.auditLog[aid])state.auditLog[aid]=[]; state.auditLog[aid].push({t:"Assigned to "+OFFICER.name,w:"just now · supervisor"}); render(); toast("Case assigned to you"); } return; }
  if(act==="escalate"){ var eid=b.getAttribute("data-id"); if(!state.auditLog)state.auditLog={}; if(!state.auditLog[eid])state.auditLog[eid]=[]; state.auditLog[eid].push({t:"Escalated to Senior Officer — reason: high financial loss",w:"just now · "+OFFICER.name}); render(); toast("Case escalated to Senior Officer"); return; }
  if(act==="requestInfo"){ var rid2=b.getAttribute("data-id"); if(!state.auditLog)state.auditLog={}; if(!state.auditLog[rid2])state.auditLog[rid2]=[]; state.auditLog[rid2].push({t:"Requested additional evidence from complainant",w:"just now · "+OFFICER.name}); render(); toast("Request sent — complainant will see it in Track my case"); return; }
- if(act==="call1930"){ toast(t("toast_call")); return; }
+ if(act==="call1930"){ window.location.href="tel:1930"; return; }
  if(act==="reportFinancial"){ state.report={cat:"f_financial",anon:false,step:"what",desc:"",files:[]}; go("report"); return; }
+ if(act==="downloadCase"){ downloadCaseFile(); return; }
  if(act==="saveDemo"){ toast(t("toast_saved")); return; }
  if(act==="repReset"){ state.report=null; go("report"); return; }
  if(act==="repBack"){ repBack(); return; }
@@ -2257,11 +2309,11 @@ document.addEventListener("click",function(e){
  if(act==="assistVoice"){ saveReportInputs(); state.report.assistContact="a phone call"; if(!state.report.amount)state.report.amount="40,000"; state.report.statement=composeStatement(state.report); state.report.desc=state.report.statement; toast("Draft ready — edit it below"); render(); return; }
  if(act==="assistGuide"){ saveReportInputs(); state.report.statement=composeStatement(state.report); state.report.desc=state.report.statement; render(); return; }
  if(act==="pasteSms"){ saveReportInputs(); state.report.amount="40,000"; state.report.utr="452087341990"; state.report.supi="fraud@okaxis"; state.report.autofilled=true; render(); toast(t("autofilled")); return; }
- if(act==="addFile"||act==="addFile2"){ if(state.report){state.report.files=state.report.files||[];state.report.files.push("Evidence_"+(state.report.files.length+1)+".png");render();} toast(t("toast_file")); return; }
- if(act==="trkSendOtp"){ var m=document.getElementById("trkMobile"); state.otpSent=true; render(); toast(t("toast_otp")); return; }
- if(act==="trkVerify"){ state.loggedIn=true; state.view="dashboard"; render(); return; }
- if(act==="trkById"){ var idv=document.getElementById("trkId").value.trim(); state.activeCaseId=idv||CASES[0].id; go("case"); return; }
- if(act==="trackNew"){ var nid=b.getAttribute("data-id"); state.activeCaseId=CASES[0].id; go("case"); return; }
+ if(act==="addFile"||act==="addFile2"){ var picker=document.getElementById("evidencePicker"); if(picker)picker.click(); return; }
+ if(act==="trkSendOtp"){ var m=document.getElementById("trkMobile"), digits=(m?m.value:"").replace(/\D/g,""); if(digits.length!==10){toast("Enter a valid 10-digit mobile number");return;} state.otpSent=true; render(); toast(t("toast_otp")); return; }
+ if(act==="trkVerify"){ var otp=(document.getElementById("trkOtp").value||"").replace(/\D/g,""); if(otp.length!==6){toast("Enter the 6-digit OTP");return;} state.loggedIn=true; state.view="dashboard"; render(); return; }
+ if(act==="trkById"){ var idv=document.getElementById("trkId").value.trim(), found=CASES.some(function(c){return c.id===idv;}); if(!found){toast("No matching demo case was found. Check the reference number.");return;} state.activeCaseId=idv; go("case"); return; }
+ if(act==="trackNew"){ state.activeCaseId=b.getAttribute("data-id"); go("case"); return; }
  if(act==="susCheck"){ var q=document.getElementById("susQ").value.trim(); if(!q){toast(t("need"));return;} var risky=/fraud|scam|lottery|refund|kyc|fake|prize|winner|verify|blocked|reward|help(desk)?|support\d/i.test(q); var sum=0;for(var i=0;i<q.length;i++)sum+=q.charCodeAt(i); state.susResult={risk:risky,count:(sum%48)+11}; render(); return; }
  if(act==="homeSusGo"){ var hsq=document.getElementById("homeSusQ"); state.susPrefill=hsq?hsq.value.trim():""; state.susTab="check"; state.susResult=null; go("suspect"); return; }
  if(act==="susAgain"){ state.susResult=null; render(); return; }
@@ -2289,7 +2341,8 @@ function repNext(){
  saveReportInputs();
  var r=state.report, i=repStepIndex();
  if(r.step==="what"){ if((r.desc||"").length<200){ toast(t("need")+" · 200 "+t("chars")); return; } }
- if(r.step==="rev"){ var c=document.getElementById("fConsent"); if(!c||!c.checked){ toast(t("need")); return; } r.newId="2026 "+rnd(4)+" "+rnd(4)+" "+rnd(4); if(document.getElementById("fFreeze")&&document.getElementById("fFreeze").checked) toast(t("toast_freeze")); go("confirm"); return; }
+ if(r.step==="when"){ if(!r.date||!r.rstate){toast("Add the incident date and your state to continue");return;} }
+ if(r.step==="rev"){ var c=document.getElementById("fConsent"); if(!c||!c.checked){ toast(t("need")); return; } r.newId="2026 "+rnd(4)+" "+rnd(4)+" "+rnd(4); newCitizenCase(r); if(document.getElementById("fFreeze")&&document.getElementById("fFreeze").checked) toast(t("toast_freeze")); go("confirm"); return; }
  r.step=REP_STEPS[i+1]; render();
 }
 function repBack(){

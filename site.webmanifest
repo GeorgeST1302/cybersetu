@@ -1,0 +1,10 @@
+{
+  "name": "CyberSetu",
+  "short_name": "CyberSetu",
+  "description": "A civic cyber-fraud reporting experience concept for India.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f5eadb",
+  "theme_color": "#9e3d19",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
