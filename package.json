@@ -1,0 +1,14 @@
+{
+  "name": "cybersetu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CyberSetu — a Material 3 civic cyber-fraud reporting service concept for India (citizen portal + officer command center).",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
