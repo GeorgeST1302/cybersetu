@@ -48,6 +48,7 @@ function renderGate() {
           <div class="field" style="margin-bottom:1.25rem">
             <label for="pass">Access code</label>
             <input id="pass" type="password" placeholder="••••••" autocomplete="current-password">
+            <span class="err" id="gateErr" hidden></span>
           </div>
           <button class="btn block lg" type="submit">
             Sign in <span class="arw">${ICON.arrow}</span>
@@ -56,22 +57,47 @@ function renderGate() {
 
         <div class="demo-creds">
           <b>Access for review:</b> any Officer ID with the code <code>cyber</code>.
+          <button type="button" class="btn sm soft" id="gateFill" style="margin-top:.7rem">
+            Fill it in for me
+          </button>
         </div>
 
         <a class="btn plain" href="index.html" style="margin-top:1rem">← Back to the citizen service</a>
       </div>
     </div>`;
 
-  $('#gateForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const pass = $('#pass').value.trim();
-    if (pass !== 'cyber') {
-      toast('That access code is not recognised', 'bad');
+  const err = $('#gateErr');
+
+  const attempt = () => {
+    /* Forgiving on case and stray whitespace — the code is printed on the card,
+       so a capital letter or a trailing space should not lock anyone out. */
+    const pass = $('#pass').value.trim().toLowerCase();
+    if (!pass) {
+      err.hidden = false;
+      err.textContent = 'Enter the access code shown below.';
       $('#pass').focus();
       return;
     }
+    if (pass !== 'cyber') {
+      err.hidden = false;
+      err.textContent = 'That access code is not recognised. It is “cyber”.';
+      toast('That access code is not recognised', 'bad');
+      $('#pass').select();
+      return;
+    }
+    err.hidden = true;
     store.set('officerIn', true);
     boot();
+  };
+
+  $('#gateForm').addEventListener('submit', e => { e.preventDefault(); attempt(); });
+  $('#pass').addEventListener('input', () => { err.hidden = true; });
+
+  $('#gateFill').addEventListener('click', () => {
+    $('#badge').value = 'KA-CYB-4471';
+    $('#pass').value = 'cyber';
+    err.hidden = true;
+    attempt();
   });
 }
 
