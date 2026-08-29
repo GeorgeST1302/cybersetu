@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>File a complaint — CyberSetu</title>
+<meta name="description" content="File a cybercrime or online financial fraud complaint step by step, attach your evidence, and receive a reference number.">
+<meta name="theme-color" content="#A8431C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/core.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="shell-header"></div>
+
+<main id="main">
+
+  <header class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="sepr">/</span><span>File a complaint</span>
+      </nav>
+      <h1>Let's put your complaint together.</h1>
+      <p>
+        Six short steps. You can skip anything you do not know and add it later —
+        what matters most is getting the complaint in quickly.
+      </p>
+      <div class="row" style="margin-top:1.25rem">
+        <span class="badge success"><span class="dot"></span><span id="draftState">Draft saves as you type</span></span>
+        <span class="badge"><span data-icon="lock" style="width:13px;height:13px;display:inline-flex"></span>Stays on this device until you submit</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="wizard" id="wizard">
+
+        <!-- step rail -->
+        <nav class="wsteps" id="wsteps" aria-label="Complaint steps"></nav>
+
+        <!-- panel -->
+        <div>
+          <div class="wprogress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="wbar">
+            <i style="width:0%"></i>
+          </div>
+          <div class="wpanel" id="wpanel"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot" id="shell-footer"></footer>
+
+<input type="file" id="evidencePicker" multiple hidden
+       accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.txt,image/png,image/jpeg,application/pdf">
+
+<script type="module" src="assets/js/report.js"></script>
+</body>
+</html>

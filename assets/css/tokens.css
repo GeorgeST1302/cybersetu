@@ -1,0 +1,238 @@
+/* ==========================================================================
+   CyberSetu — design tokens
+   One warm civic palette, defined once on :root, re-mapped for dark.
+   Nothing below this file may hard-code a hex value.
+   ========================================================================== */
+
+:root {
+  /* --- brand ramps ------------------------------------------------------ */
+  --terracotta-50:#FDF1E9;  --terracotta-100:#F8DCC9;  --terracotta-200:#EFBB9B;
+  --terracotta-400:#C96B36; --terracotta-500:#A8431C;  --terracotta-600:#8A3413;
+  --terracotta-700:#66240C;
+
+  --saffron-100:#FDEBD0; --saffron-300:#F5C07A; --saffron-500:#E07B2C; --saffron-700:#A85310;
+
+  --palm-50:#E6F2EA; --palm-100:#C9E6D4; --palm-400:#3E8C5E; --palm-500:#2C6B45; --palm-700:#164F2F;
+
+  --indigo-100:#DDE2F5; --indigo-500:#3B4A93; --indigo-700:#232F6B;
+
+  --clay-50:#FBF5EC;  --clay-100:#F5EADB; --clay-200:#EADBC6;
+  --clay-300:#E0CDB6; --clay-400:#C9B096; --clay-500:#9A836C;
+  --clay-700:#6E594C; --clay-900:#2A1D16;
+
+  --crimson-100:#FBDDD8; --crimson-500:#B3261E; --crimson-700:#7C1710;
+
+  /* --- semantic roles (light) ------------------------------------------- */
+  --bg:var(--clay-50);
+  --surface:#FFFDF9;
+  --surface-2:var(--clay-100);
+  --surface-3:var(--clay-200);
+  --surface-inset:#FFFFFF;
+
+  --ink:var(--clay-900);
+  --ink-2:#4A382E;
+  --muted:var(--clay-700);
+  --faint:var(--clay-500);
+
+  --line:var(--clay-300);
+  --line-soft:var(--clay-200);
+  --line-strong:var(--clay-400);
+
+  --primary:var(--terracotta-500);
+  --primary-hover:var(--terracotta-600);
+  --primary-ink:#FFFFFF;
+  --primary-soft:var(--terracotta-50);
+  --primary-soft-ink:var(--terracotta-700);
+  --primary-ring:rgba(168,67,28,.22);
+
+  --accent:var(--saffron-500);
+  --accent-soft:var(--saffron-100);
+  --accent-ink:var(--saffron-700);
+
+  --success:var(--palm-500);
+  --success-soft:var(--palm-50);
+  --success-ink:var(--palm-700);
+
+  --danger:var(--crimson-500);
+  --danger-soft:var(--crimson-100);
+  --danger-ink:var(--crimson-700);
+
+  --info:var(--indigo-500);
+  --info-soft:var(--indigo-100);
+  --info-ink:var(--indigo-700);
+
+  /* deep panel used for hero emergency, officer chrome, footers */
+  --slab:#2E2019;
+  --slab-2:#3D2B21;
+  --slab-ink:#FBEEE0;
+  --slab-muted:#C6A98F;
+  --slab-line:rgba(251,238,224,.16);
+
+  /* monument skyline: silhouettes dissolve into the ground they stand on */
+  --sky-top:color-mix(in srgb, var(--primary) 82%, var(--surface-2));
+  --sky-bottom:color-mix(in srgb, var(--primary) 26%, var(--surface-2));
+  --sky-cut:var(--surface-2);
+
+  /* tricolour */
+  --tri-saffron:#FF9933;
+  --tri-white:#FFFFFF;
+  --tri-green:#138808;
+  --tri-chakra:#0A3A82;
+
+  /* --- type ------------------------------------------------------------- */
+  --font-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --font-ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+
+  --step--1:clamp(.78rem,.76rem + .1vw,.83rem);
+  --step-0:clamp(.94rem,.92rem + .12vw,1rem);
+  --step-1:clamp(1.1rem,1.05rem + .25vw,1.22rem);
+  --step-2:clamp(1.3rem,1.2rem + .5vw,1.6rem);
+  --step-3:clamp(1.6rem,1.4rem + 1vw,2.15rem);
+  --step-4:clamp(2rem,1.6rem + 2vw,3rem);
+  --step-5:clamp(2.5rem,1.8rem + 3.4vw,4.25rem);
+
+  /* --- space / shape ---------------------------------------------------- */
+  --wrap:1220px;
+  --wrap-narrow:820px;
+  --gutter:clamp(1rem,4vw,1.6rem);
+
+  --r-xs:6px; --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+
+  --sh-1:0 1px 2px rgba(58,36,20,.07), 0 1px 3px rgba(58,36,20,.05);
+  --sh-2:0 2px 6px rgba(58,36,20,.07), 0 8px 20px -10px rgba(58,36,20,.18);
+  --sh-3:0 6px 16px rgba(58,36,20,.09), 0 20px 46px -20px rgba(58,36,20,.28);
+  --sh-inset:inset 0 1px 0 rgba(255,255,255,.6);
+
+  /* --- motion ----------------------------------------------------------- */
+  --ease:cubic-bezier(.2,.7,.25,1);
+  --ease-spring:cubic-bezier(.34,1.4,.5,1);
+  --t-fast:.16s; --t:.26s; --t-slow:.5s;
+
+  color-scheme:light;
+}
+
+/* --- dark ---------------------------------------------------------------- */
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) { color-scheme:dark; }
+}
+
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#14100D;
+    --surface:#1D1712;
+    --surface-2:#241D17;
+    --surface-3:#2E251D;
+    --surface-inset:#191410;
+
+    --ink:#F3E8DA;
+    --ink-2:#E2D2C0;
+    --muted:#BCA695;
+    --faint:#8D7967;
+
+    --line:#3A2E25;
+    --line-soft:#2C231C;
+    --line-strong:#51402F;
+
+    --primary:#F0915A;
+    --primary-hover:#F7A876;
+    --primary-ink:#3A1908;
+    --primary-soft:#31201A;
+    --primary-soft-ink:#F8C5A2;
+    --primary-ring:rgba(240,145,90,.26);
+
+    --accent:#F0A94E;
+    --accent-soft:#33240F;
+    --accent-ink:#F7CC8E;
+
+    --success:#6FC38E;
+    --success-soft:#16301F;
+    --success-ink:#A8DEBF;
+
+    --danger:#F2938A;
+    --danger-soft:#3A1512;
+    --danger-ink:#F8C3BC;
+
+    --info:#9AA9E8;
+    --info-soft:#1C2140;
+    --info-ink:#C6CFF5;
+
+    --slab:#221B15;
+    --slab-2:#2E251D;
+    --slab-ink:#F3E8DA;
+    --slab-muted:#B49B85;
+    --slab-line:rgba(243,232,218,.14);
+
+    --sh-1:0 1px 2px rgba(0,0,0,.4);
+    --sh-2:0 2px 6px rgba(0,0,0,.42), 0 10px 24px -12px rgba(0,0,0,.6);
+    --sh-3:0 8px 20px rgba(0,0,0,.45), 0 24px 54px -22px rgba(0,0,0,.7);
+    --sh-inset:inset 0 1px 0 rgba(255,255,255,.05);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme:dark;
+  --bg:#14100D;
+  --surface:#1D1712;
+  --surface-2:#241D17;
+  --surface-3:#2E251D;
+  --surface-inset:#191410;
+
+  --ink:#F3E8DA;
+  --ink-2:#E2D2C0;
+  --muted:#BCA695;
+  --faint:#8D7967;
+
+  --line:#3A2E25;
+  --line-soft:#2C231C;
+  --line-strong:#51402F;
+
+  --primary:#F0915A;
+  --primary-hover:#F7A876;
+  --primary-ink:#3A1908;
+  --primary-soft:#31201A;
+  --primary-soft-ink:#F8C5A2;
+  --primary-ring:rgba(240,145,90,.26);
+
+  --accent:#F0A94E;
+  --accent-soft:#33240F;
+  --accent-ink:#F7CC8E;
+
+  --success:#6FC38E;
+  --success-soft:#16301F;
+  --success-ink:#A8DEBF;
+
+  --danger:#F2938A;
+  --danger-soft:#3A1512;
+  --danger-ink:#F8C3BC;
+
+  --info:#9AA9E8;
+  --info-soft:#1C2140;
+  --info-ink:#C6CFF5;
+
+  --slab:#221B15;
+  --slab-2:#2E251D;
+  --slab-ink:#F3E8DA;
+  --slab-muted:#B49B85;
+  --slab-line:rgba(243,232,218,.14);
+
+  --sh-1:0 1px 2px rgba(0,0,0,.4);
+  --sh-2:0 2px 6px rgba(0,0,0,.42), 0 10px 24px -12px rgba(0,0,0,.6);
+  --sh-3:0 8px 20px rgba(0,0,0,.45), 0 24px 54px -22px rgba(0,0,0,.7);
+  --sh-inset:inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+/* --- high contrast (accessibility toolbar) ------------------------------- */
+:root[data-contrast="on"] {
+  --line:var(--line-strong);
+  --muted:var(--ink-2);
+  --faint:var(--muted);
+}
+:root[data-contrast="on"] .card,
+:root[data-contrast="on"] .field input,
+:root[data-contrast="on"] .field select,
+:root[data-contrast="on"] .field textarea { border-width:2px; }
+
+/* --- text scaling (accessibility toolbar) -------------------------------- */
+:root { --text-scale:1; }
+html { font-size:calc(100% * var(--text-scale)); }

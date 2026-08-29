@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help and support — CyberSetu</title>
+<meta name="description" content="Reach the cyber fraud helpline, find answers to common questions, read the accessibility statement and see how your information is handled.">
+<meta name="theme-color" content="#A8431C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/core.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="shell-header"></div>
+
+<main id="main">
+
+  <header class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="sepr">/</span><span>Help</span>
+      </nav>
+      <h1>Get help.</h1>
+      <p>Start with whichever of these fits your situation. If money has just left your account, call 1930 first.</p>
+    </div>
+  </header>
+
+  <!-- ==================================================================
+       CONTACT ROUTES
+       ================================================================== -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contactgrid">
+        <article class="card hoverable reveal">
+          <span class="itile danger" data-icon="phone"></span>
+          <h3 style="margin-top:1rem">Money is being taken right now</h3>
+          <p>
+            Call 1930. It is free, answered 24 hours a day, and it is the fastest way
+            to get a hold placed on a transfer.
+          </p>
+          <a class="btn danger" href="tel:1930" style="margin-top:1.25rem">Call 1930</a>
+        </article>
+
+        <article class="card hoverable reveal" data-delay="1">
+          <span class="itile" data-icon="report"></span>
+          <h3 style="margin-top:1rem">I want to file a complaint</h3>
+          <p>
+            The guided form takes about ten minutes and saves itself as you go, so
+            you can stop and come back.
+          </p>
+          <a class="btn" href="report.html" style="margin-top:1.25rem">File a complaint</a>
+        </article>
+
+        <article class="card hoverable reveal" data-delay="2">
+          <span class="itile info" data-icon="track"></span>
+          <h3 style="margin-top:1rem">I filed already, what now?</h3>
+          <p>
+            Use your reference number to see the current stage, the officer handling
+            it, and the response deadline.
+          </p>
+          <a class="btn ghost" href="track.html" style="margin-top:1.25rem">Track my case</a>
+        </article>
+      </div>
+
+      <div class="card reveal" style="margin-top:1.5rem;background:var(--surface-2)">
+        <div class="grid-3" style="gap:1.5rem">
+          <div>
+            <h4 style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:.5rem">Helpline</h4>
+            <p style="font-size:1.4rem;font-family:var(--font-display);font-weight:600">1930</p>
+            <p style="font-size:.85rem;margin-top:.25rem">Free · 24×7 · all states</p>
+          </div>
+          <div>
+            <h4 style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:.5rem">Emergency</h4>
+            <p style="font-size:1.4rem;font-family:var(--font-display);font-weight:600">112</p>
+            <p style="font-size:.85rem;margin-top:.25rem">If somebody is in immediate danger</p>
+          </div>
+          <div>
+            <h4 style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:.5rem">Women and children</h4>
+            <p style="font-size:1.4rem;font-family:var(--font-display);font-weight:600">1098</p>
+            <p style="font-size:.85rem;margin-top:.25rem">Childline, for concerns about a child</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       FAQ
+       ================================================================== -->
+  <section class="section tinted bordered" id="faq">
+    <div class="wrap narrow">
+      <div class="lead reveal">
+        <span class="eyebrow">Common questions</span>
+        <h2>Things people ask most.</h2>
+      </div>
+      <div class="faq reveal" style="margin-top:1.75rem" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       NEAREST UNIT
+       ================================================================== -->
+  <section class="section">
+    <div class="wrap narrow">
+      <div class="lead reveal">
+        <span class="eyebrow">In person</span>
+        <h2>Find your nearest cyber cell.</h2>
+        <p>You can file online from anywhere, but some cases are easier to progress in person.</p>
+      </div>
+      <div class="card reveal" style="margin-top:1.5rem">
+        <div class="field">
+          <label for="stateFind">Your state or union territory</label>
+          <select id="stateFind"></select>
+        </div>
+        <div id="unitResult" style="margin-top:1.25rem"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       ACCESSIBILITY
+       ================================================================== -->
+  <section class="section tinted bordered" id="accessibility">
+    <div class="wrap narrow">
+      <div class="lead reveal">
+        <span class="eyebrow">Accessibility</span>
+        <h2>Built to be usable by more people.</h2>
+        <p>
+          Reporting fraud should not depend on good eyesight, a steady hand or a fast connection.
+        </p>
+      </div>
+      <div class="grid-2 reveal" style="margin-top:1.75rem">
+        <div class="card flat">
+          <h3 style="font-size:1rem;margin-bottom:.6rem">On every page</h3>
+          <ul style="display:grid;gap:.55rem;font-size:.9rem;color:var(--muted)">
+            <li>• Text size control, up to 145%</li>
+            <li>• A high-contrast mode</li>
+            <li>• Light and dark themes, following your device by default</li>
+            <li>• English, Hindi and Kannada</li>
+          </ul>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:1rem;margin-bottom:.6rem">Under the surface</h3>
+          <ul style="display:grid;gap:.55rem;font-size:.9rem;color:var(--muted)">
+            <li>• Every action reachable by keyboard, with a visible focus ring</li>
+            <li>• Labelled form fields and live status messages for screen readers</li>
+            <li>• All motion removed when your device asks for reduced motion</li>
+            <li>• Skip-to-content link on every page</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted reveal" style="margin-top:1.25rem;font-size:.88rem">
+        Something here does not work for you? Tell us on
+        <a href="tel:1930" style="color:var(--primary);font-weight:650">1930</a>
+        so it can be fixed.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       PRIVACY
+       ================================================================== -->
+  <section class="section" id="privacy">
+    <div class="wrap narrow">
+      <div class="lead reveal">
+        <span class="eyebrow">Your information</span>
+        <h2>What we ask for, and why.</h2>
+      </div>
+      <div class="stack reveal" style="gap:1rem;margin-top:1.75rem">
+        <div class="card flat">
+          <h3 style="font-size:1rem;margin-bottom:.5rem">We only ask for what moves your case</h3>
+          <p>
+            Every field on the complaint form exists because an officer or a bank
+            needs it. Anything optional is marked optional, and you can submit without it.
+          </p>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:1rem;margin-bottom:.5rem">Your draft stays on your device</h3>
+          <p>
+            A part-finished complaint is saved in your own browser so you do not lose
+            it. It is not sent anywhere until you press submit.
+          </p>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:1rem;margin-bottom:.5rem">Evidence is fingerprinted, not altered</h3>
+          <p>
+            Each file you attach gets a SHA-256 fingerprint calculated in your browser.
+            It travels with the complaint so it can be shown the file was not changed afterwards.
+          </p>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:1rem;margin-bottom:.5rem">Anonymous reporting stays anonymous</h3>
+          <p>
+            For complaints involving a woman or child, you can file without giving your
+            name or number. Your reference number is then the only link to the complaint.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot" id="shell-footer"></footer>
+
+<script type="module" src="assets/js/help.js"></script>
+</body>
+</html>

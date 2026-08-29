@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a suspect — CyberSetu</title>
+<meta name="description" content="Check a phone number, UPI ID, email or link against identifiers reported by other people before you pay or share anything.">
+<meta name="theme-color" content="#A8431C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/core.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="shell-header"></div>
+
+<main id="main">
+
+  <header class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="sepr">/</span><span>Check a suspect</span>
+      </nav>
+      <h1>Check it before you pay.</h1>
+      <p>
+        Paste a phone number, UPI ID, email address or link. We match it against
+        identifiers other people have reported, so you can pause before the money leaves.
+      </p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <form class="lookup" id="lookupForm" role="search">
+        <label class="sr-only" for="q">Number, UPI ID, email or link</label>
+        <input id="q" name="q" type="text" autocomplete="off"
+               placeholder="98XXXXXXXX · name@bank · https://…">
+        <button class="btn" type="submit" data-cursor="Check">Check it</button>
+      </form>
+
+      <div class="pill-row" style="margin-top:1rem" id="examples"></div>
+
+      <div id="result" style="margin-top:2rem"></div>
+
+      <div class="card flat" style="margin-top:2rem;background:var(--surface-2)">
+        <div class="row" style="gap:.85rem;flex-wrap:nowrap;align-items:flex-start">
+          <span class="itile info" data-icon="info"></span>
+          <div>
+            <h3 style="font-size:1rem;margin-bottom:.35rem">How to read this</h3>
+            <p style="font-size:.9rem">
+              This checks what has been reported, not what is provably criminal.
+              A high score means many people have flagged it and you should not proceed.
+              A clean result means nobody has reported it yet — which is not the same
+              as being safe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       WARN SOMEBODY ELSE
+       ================================================================== -->
+  <section class="section tinted bordered">
+    <div class="wrap narrow">
+      <div class="lead reveal">
+        <span class="eyebrow">Warn the next person</span>
+        <h2>Report a number, ID or link you were targeted with.</h2>
+        <p>
+          You do not need to have lost money. Flagging an identifier helps the next
+          person get a warning before they pay.
+        </p>
+      </div>
+
+      <form class="card" id="flagForm" style="margin-top:1.75rem">
+        <div class="grid-2">
+          <div class="field">
+            <label for="flagValue">Number, UPI ID, email or link</label>
+            <input id="flagValue" type="text" placeholder="98XXXXXXXX · name@bank · https://…" required>
+          </div>
+          <div class="field">
+            <label for="flagType">What kind of approach was it?</label>
+            <select id="flagType">
+              <option>Fake bank or customer care</option>
+              <option>Fake KYC or account update</option>
+              <option>Job or task offer</option>
+              <option>Investment or trading</option>
+              <option>Lottery or prize</option>
+              <option>Loan app</option>
+              <option>Romance or friendship</option>
+              <option>Impersonating an official</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field" style="margin-top:1rem">
+          <label for="flagNote">What happened? (optional)</label>
+          <textarea id="flagNote" style="min-height:100px"
+                    placeholder="A short description helps other people recognise the same approach."></textarea>
+        </div>
+        <button class="btn" type="submit" style="margin-top:1.25rem">
+          Add this warning <span class="arw" data-icon="arrow"></span>
+        </button>
+      </form>
+
+      <div id="flagged" style="margin-top:1.5rem"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot" id="shell-footer"></footer>
+
+<script type="module" src="assets/js/check.js"></script>
+</body>
+</html>

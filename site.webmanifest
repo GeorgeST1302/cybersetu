@@ -1,10 +1,10 @@
 {
-  "name": "CyberSetu",
+  "name": "CyberSetu — Report cyber fraud",
   "short_name": "CyberSetu",
-  "description": "A civic cyber-fraud reporting experience concept for India.",
+  "description": "Report online financial fraud and cybercrime, check a suspicious number or link, and follow your complaint through to an outcome.",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#f5eadb",
-  "theme_color": "#9e3d19",
+  "background_color": "#FBF5EC",
+  "theme_color": "#A8431C",
   "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
 }

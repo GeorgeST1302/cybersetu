@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About the service — CyberSetu</title>
+<meta name="description" content="What CyberSetu does for people reporting cyber fraud and for the officers handling those cases, and how it differs from the reporting journey available today.">
+<meta name="theme-color" content="#A8431C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/core.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="shell-header"></div>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow enter">About the service</span>
+          <h1 class="enter" data-delay="1">A reporting journey <em>built for the worst hour.</em></h1>
+          <p class="sub enter" data-delay="2">
+            Cyber fraud is a time-critical crime handled through a form designed like a
+            record-keeping exercise. CyberSetu keeps everything the national process
+            needs, and rebuilds the parts that decide whether the money is recoverable.
+          </p>
+          <div class="hero-actions enter" data-delay="3">
+            <a class="btn lg magnetic" href="report.html">See the citizen journey <span class="arw" data-icon="arrow"></span></a>
+            <a class="btn lg ghost" href="officer.html">See the officer console</a>
+          </div>
+        </div>
+        <aside class="enter" data-delay="2">
+          <div class="slab">
+            <h3 style="color:var(--slab-ink);font-size:1.05rem;margin-bottom:1rem">The problem in one line</h3>
+            <p style="font-size:1rem;line-height:1.65">
+              Money moved by fraud is layered through mule accounts within hours — but
+              the reporting journey asks people to classify a crime, gather documents
+              and complete a long form before anything reaches a bank.
+            </p>
+            <div class="statrow" style="margin-top:1.5rem;background:transparent;border-color:var(--slab-line);grid-template-columns:1fr 1fr">
+              <div class="stat" style="border-color:var(--slab-line)">
+                <div class="n" style="color:var(--accent)">1 hr</div>
+                <div class="l" style="color:var(--slab-muted)">when a hold is most likely to work</div>
+              </div>
+              <div class="stat">
+                <div class="n" style="color:var(--accent)">5 min</div>
+                <div class="l" style="color:var(--slab-muted)">target time to a filed complaint</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <div class="skyline" aria-hidden="true"></div>
+  </section>
+
+  <!-- ==================================================================
+       DESIGN PRINCIPLES
+       ================================================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">How it was decided</span>
+        <h2>Four rules the whole service follows.</h2>
+      </div>
+      <div class="featgrid" id="principles"></div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       CITIZEN FEATURES
+       ================================================================== -->
+  <section class="section tinted bordered" id="citizen">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">For the person reporting</span>
+        <h2>What the citizen side does.</h2>
+        <p>Each of these exists to remove a specific reason people give up, delay, or file something an officer cannot act on.</p>
+      </div>
+      <div class="speclist" id="citizenSpecs" style="margin-top:1.5rem"></div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       OFFICER FEATURES
+       ================================================================== -->
+  <section class="section" id="officer">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">For the people handling cases</span>
+        <h2>What the officer console does.</h2>
+        <p>
+          A complaint that nobody can act on quickly is not much better than no complaint.
+          The second half of the service is the operational side.
+        </p>
+      </div>
+      <div class="speclist" id="officerSpecs" style="margin-top:1.5rem"></div>
+      <div style="margin-top:2rem" class="reveal">
+        <a class="btn" href="officer.html">Open the officer console <span class="arw" data-icon="arrow"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       COMPARISON
+       ================================================================== -->
+  <section class="section tinted bordered" id="comparison">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">Side by side</span>
+        <h2>What is added, and what is kept.</h2>
+        <p>
+          Everything the national reporting process requires is still collected.
+          The differences are in sequencing, feedback and what happens after you submit.
+        </p>
+      </div>
+      <div class="table-wrap reveal" style="margin-top:1.75rem">
+        <table class="data compare">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th style="width:19%">Typical portal journey</th>
+              <th style="width:19%">CyberSetu</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       TECH
+       ================================================================== -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="lead reveal">
+        <span class="eyebrow">How it is built</span>
+        <h2>Fast to load, cheap to run, easy to hand over.</h2>
+        <p>
+          A public service has to work on a slow connection on an old phone. That
+          constraint drove every technical decision here.
+        </p>
+      </div>
+      <div class="stackgrid reveal" style="margin-top:1.75rem" id="stackGrid"></div>
+
+      <div class="grid-2" style="margin-top:1.5rem">
+        <div class="card reveal">
+          <h3 style="font-size:1.05rem;margin-bottom:.75rem">Things that genuinely work here</h3>
+          <ul style="display:grid;gap:.55rem;font-size:.9rem;color:var(--muted)" id="realList"></ul>
+        </div>
+        <div class="card reveal" data-delay="1">
+          <h3 style="font-size:1.05rem;margin-bottom:.75rem">What a production build would add</h3>
+          <ul style="display:grid;gap:.55rem;font-size:.9rem;color:var(--muted)" id="prodList"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot" id="shell-footer"></footer>
+
+<script type="module" src="assets/js/about.js"></script>
+</body>
+</html>
