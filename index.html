@@ -957,6 +957,11 @@
   .view{animation:page-enter .32s cubic-bezier(.2,.8,.2,1)}.reveal{opacity:0;transform:translateY(14px);transition:opacity .42s ease,transform .42s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}@keyframes page-enter{from{opacity:.01;transform:translateY(5px)}to{opacity:1;transform:none}}
   .civic-intro .hero-kicker{animation:hero-enter .5s .04s both}.civic-intro h1{animation:hero-enter .58s .1s both}.civic-intro p{animation:hero-enter .58s .17s both}.civic-intro .hero-primary{animation:hero-enter .55s .25s both}.hero-emergency{animation:hero-enter .6s .2s both}.civic-hero .skyline{animation:skyline-rise .9s .18s both}.hero-primary{transition:transform .18s ease,box-shadow .18s ease}.hero-primary:hover{transform:translateY(-2px);box-shadow:0 5px 0 #68230d}.hero-emergency>.material-symbols-rounded{animation:phone-pulse 2.2s ease-in-out infinite}.action-ribbon-links button{transition:background .18s ease,padding .18s ease}.action-ribbon-links button:hover{padding-left:21px}.action-ribbon-links button>span:last-child{transition:transform .18s ease}.action-ribbon-links button:hover>span:last-child{transform:translateX(4px)}.officer-nav{display:inline-flex!important;align-items:center;gap:7px;margin-left:8px;border-left:1px solid rgba(255,255,255,.18)!important}.officer-nav .material-symbols-rounded{font-size:18px}.admin .opsrow,.admin .attn-card,.admin .panel,.admin .atable-wrap{animation:admin-enter .38s both}.admin .attn-card:nth-child(2){animation-delay:.06s}.admin .attn-card:nth-child(3){animation-delay:.12s}@keyframes hero-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes skyline-rise{from{opacity:0;transform:translateY(18px)}to{opacity:.72;transform:none}}@keyframes phone-pulse{0%,100%{transform:rotate(0) scale(1)}8%{transform:rotate(-10deg)}16%{transform:rotate(9deg)}24%{transform:rotate(-5deg)}32%{transform:rotate(0) scale(1.08)}}@keyframes admin-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   .command-routes{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #d5c2af;background:#fff8ed}.command-routes button{padding:18px;border:0;border-right:1px solid #d5c2af;background:transparent;text-align:left;color:var(--ink);font-family:var(--ui);transition:background .18s ease}.command-routes button:last-child{border-right:0}.command-routes button:hover{background:#f3dfc8}.command-routes .material-symbols-rounded{display:block;color:#9e3d19;font-size:25px;margin-bottom:10px}.command-routes b{display:block;font-size:15px}.command-routes small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:4px}@media(max-width:900px){.officer-nav{display:none!important}.command-routes{grid-template-columns:1fr}.command-routes button{border-right:0;border-bottom:1px solid #d5c2af}.command-routes button:last-child{border-bottom:0}}@media(prefers-reduced-motion:reduce){.view,.reveal,.civic-intro .hero-kicker,.civic-intro h1,.civic-intro p,.civic-intro .hero-primary,.hero-emergency,.civic-hero .skyline,.admin .opsrow,.admin .attn-card,.admin .panel,.admin .atable-wrap{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
+  /* Interaction layer: depth and motion that clarify actions instead of slowing them down. */
+  .interactive-surface{transform-style:preserve-3d;will-change:transform;transition:transform .18s ease,box-shadow .18s ease}.interactive-surface.is-tilting{transform:perspective(900px) rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg)) translateY(-5px);box-shadow:0 14px 28px rgba(48,28,16,.18)}
+  .hero-emergency{isolation:isolate;overflow:hidden}.hero-emergency::before{content:"";position:absolute;width:210px;height:210px;right:-90px;bottom:-95px;border:1px solid rgba(244,176,112,.5);border-radius:50%;box-shadow:0 0 0 26px rgba(244,176,112,.05),0 0 0 52px rgba(244,176,112,.03);animation:emergency-breathe 3s ease-in-out infinite;z-index:-1}.hero-emergency>*{position:relative;z-index:1}.hero-signal{position:absolute!important;z-index:0!important;right:25px;bottom:26px;width:58px;height:58px;opacity:.9}.hero-signal i{position:absolute;inset:0;border:1px solid #f4b070;border-radius:50%;animation:signal-ring 2.3s ease-out infinite}.hero-signal i:nth-child(2){animation-delay:.76s}.hero-signal i:nth-child(3){animation-delay:1.52s}.hero-signal::after{content:"";position:absolute;left:25px;top:25px;width:8px;height:8px;border-radius:50%;background:#f4b070;box-shadow:0 0 14px #f4b070}@keyframes emergency-breathe{50%{transform:scale(1.08);opacity:.7}}@keyframes signal-ring{0%{transform:scale(.2);opacity:.9}100%{transform:scale(1);opacity:0}}
+  .interactive-stage{cursor:pointer;border-radius:8px;padding:5px 8px 12px;margin:0 -8px;transition:background .2s ease,transform .2s ease}.interactive-stage:hover,.interactive-stage:focus-visible,.interactive-stage.selected{background:color-mix(in srgb,var(--md-primary-container) 48%,transparent);transform:translateX(4px);outline:0}.stage-pop{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease;margin-top:0}.stage-pop>span{overflow:hidden;font-size:12.5px;line-height:1.45;color:var(--muted)}.interactive-stage.selected .stage-pop{grid-template-rows:1fr;margin-top:8px}.interactive-stage.selected .stage-pop>span{padding-top:8px;border-top:1px dashed var(--border)}
+  @media(max-width:700px){.interactive-surface.is-tilting{transform:none;box-shadow:none}}@media(prefers-reduced-motion:reduce){.interactive-surface,.interactive-surface.is-tilting,.interactive-stage,.stage-pop{transition:none!important;transform:none!important}.hero-emergency::before,.hero-signal i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -1534,7 +1539,7 @@ function vHome(){
       '<h1>Report a cybercrime. <em>Take the next step.</em></h1>'+
       '<p>Submit a complaint, add evidence and see what happens next — without needing to understand the system first.</p>'+
       '<button class="hero-primary" data-nav="report"><span class="material-symbols-rounded" aria-hidden="true">report</span> Report a cybercrime</button></div>'+
-    '<aside class="hero-emergency"><span class="material-symbols-rounded" aria-hidden="true">phone_in_talk</span><div class="emergency-kicker">Lost money just now?</div><strong>Call <a href="tel:1930" aria-label="Call the 1930 helpline">1930</a></strong><p>It is toll-free, 24×7 and can help stop a transfer quickly.</p><button data-act="reportFinancial">Report money fraud <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button></aside>'+
+    '<aside class="hero-emergency"><span class="hero-signal" aria-hidden="true"><i></i><i></i><i></i></span><span class="material-symbols-rounded" aria-hidden="true">phone_in_talk</span><div class="emergency-kicker">Lost money just now?</div><strong>Call <a href="tel:1930" aria-label="Call the 1930 helpline">1930</a></strong><p>It is toll-free, 24×7 and can help stop a transfer quickly.</p><button data-act="reportFinancial">Report money fraud <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button></aside>'+
   '</div></div></header>'+
   '<section class="action-ribbon"><div class="wrap"><div class="action-ribbon-label">Or continue where you left off</div><div class="action-ribbon-links">'+
     '<button data-nav="track"><span class="material-symbols-rounded" aria-hidden="true">manage_search</span><span><b>Track my case</b><small>Case status and updates</small></span><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>'+
@@ -1762,7 +1767,7 @@ function vCase(){
    var body='<div class="mt">'+t(s)+'</div><div class="md">'+info.d+'</div>'+
      (i===c.statusIdx?'<div class="md" style="margin-top:6px"><b style="color:var(--ink)">What to expect: </b>'+info.x+'</div>':'')+
      ((i<=c.statusIdx&&when)?'<div class="mwhen">'+esc(when)+'</div>':'');
-   return '<div class="mstation '+cls+'"><span class="mline"></span><span class="mnode">'+(i<c.statusIdx?"✓":(i+1))+'</span><div class="mtxt">'+body+'</div></div>';
+   return '<div class="mstation '+cls+' interactive-stage" tabindex="0" role="button" aria-expanded="false"><span class="mline"></span><span class="mnode">'+(i<c.statusIdx?"✓":(i+1))+'</span><div class="mtxt">'+body+'<div class="stage-pop"><span><b>Stage '+(i+1)+' — '+t(s)+'. </b>'+info.d+' '+info.x+'</span></div></div></div>';
  }).join("")+'</div>';
  var ev=c.evidence.map(function(e){return '<div class="evrow"><span class="ei">'+IC.file+'</span> '+esc(e[0])+' <span class="es">'+(e[1]==="pdf"?"PDF":"Image")+'</span></div>';}).join("");
  var grp=function(title,items){return '<div class="grp"><div class="grp-h">'+title+'</div>'+(typeof items[0]==="string"?items.map(function(x){return '<div class="grp-r"><span class="grp-v" style="text-align:left;max-width:100%;font-weight:400;color:var(--ink)">'+esc(x)+'</span></div>';}).join(""):items.map(function(it){return '<div class="grp-r"><span class="grp-k">'+it[0]+'</span><span class="grp-v">'+esc(it[1])+'</span></div>';}).join(""))+'</div>';};
@@ -2149,6 +2154,7 @@ function render(){
  document.body.classList.toggle("admin-mode",adminOn);
  setActiveNav();
  setupReveal();
+ setupInteractiveSurfaces();
  if(adminOn) animateAdmin();
  if(state.view==="admin_live") startMonitor(); else stopMonitor();
  if(state.view==="home") startHomeTick(); else stopHomeTick();
@@ -2223,6 +2229,17 @@ function setupReveal(){
    _io.observe(e);
  });
 }
+function setupInteractiveSurfaces(){
+ if(reduceMotion()||!(window.matchMedia&&window.matchMedia("(hover:hover)").matches))return;
+ main.querySelectorAll(".hero-emergency,.lcard,.helpcard,.command-routes button").forEach(function(el){
+   el.classList.add("interactive-surface");
+   el.addEventListener("pointermove",function(e){
+     var r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+     el.style.setProperty("--tilt-x",(x*7).toFixed(2)+"deg"); el.style.setProperty("--tilt-y",(-y*6).toFixed(2)+"deg"); el.classList.add("is-tilting");
+   });
+   el.addEventListener("pointerleave",function(){el.classList.remove("is-tilting");});
+ });
+}
 function setActiveNav(){
  var map={report:"report",confirm:"report",track:"track",dashboard:"track",case:"track",suspect:"suspect",learn:"learn",help:"help"};
  document.querySelectorAll("nav.main a.nl").forEach(function(a){a.classList.toggle("active", a.getAttribute("data-nav")===map[state.view]);});
@@ -2266,6 +2283,13 @@ function composeStatement(r){
 document.addEventListener("click",function(e){
  var nav=e.target.closest("[data-nav]");
  if(nav){e.preventDefault(); var v=nav.getAttribute("data-nav"); if(v==="report"){state.report=null;} go(v); closeNav(); return;}
+ var stage=e.target.closest(".interactive-stage");
+ if(stage){
+   var was=stage.classList.contains("selected");
+   main.querySelectorAll(".interactive-stage").forEach(function(s){s.classList.remove("selected");s.setAttribute("aria-expanded","false");});
+   if(!was){stage.classList.add("selected");stage.setAttribute("aria-expanded","true");}
+   return;
+ }
  var b=e.target.closest("[data-act]");
  var rc=e.target.closest("[data-repcat]");
  if(rc){ state.report={cat:rc.getAttribute("data-repcat"), anon:rc.getAttribute("data-anon")==="1", step:"what", desc:"", files:[]}; go("report"); return; }
@@ -2320,6 +2344,7 @@ document.addEventListener("click",function(e){
  if(act==="susReport"){ toast(t("toast_submitted")); state.susTab="check"; render(); return; }
 });
 document.addEventListener("keydown",function(e){
+ if((e.key===" "||e.key==="Enter")&&e.target.classList&&e.target.classList.contains("interactive-stage")){e.preventDefault();e.target.click();return;}
  if(e.key===" "||e.key==="Enter"){ var ek=e.target.closest("[data-ev]"); if(ek){ e.preventDefault(); ek.click(); } }
 });
 
