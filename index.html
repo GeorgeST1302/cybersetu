@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 <title>CyberSetu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Roboto:wght@400;500;600;700&family=Roboto+Slab:wght@500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Roboto:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap">
 <style>
   :root{
     /* ===== CyberSetu — Material 3 civic: government deep-blue primary, teal progress, semantic accents ===== */
@@ -865,7 +865,7 @@
     --md-surface:#f8f9ff; --md-sc-lowest:#fff; --md-sc-low:#f3f5fb; --md-sc:#edf0f7; --md-sc-high:#e7ebf3;
     --md-on-surface:#1a1b20; --md-on-surface-variant:#44474f; --md-outline:#747780; --md-outline-variant:#c4c6d0;
     --slab:#0d2b5a; --slab-2:#154080; --slab-mut:#c7d8ff; --radius:20px; --radius-sm:14px; --maxw:1240px;
-    --display:"Roboto Slab", Georgia, serif; --ui:"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --display:"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --ui:"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --e1:0 1px 2px rgba(30,41,66,.08),0 2px 5px rgba(30,41,66,.05);
     --e2:0 7px 18px rgba(30,41,66,.10),0 2px 5px rgba(30,41,66,.06);
     --e3:0 18px 45px rgba(30,41,66,.14),0 4px 10px rgba(30,41,66,.07);
@@ -874,7 +874,7 @@
   .material-symbols-rounded{font-family:"Material Symbols Rounded";font-weight:normal;font-style:normal;font-size:20px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased;font-feature-settings:"liga"}
   .govbar{background:#071d42;color:#dce8ff;font-size:12px;letter-spacing:.01em}
   .govbar .wrap{min-height:34px;display:flex;align-items:center;gap:9px;justify-content:space-between}
-  .govbar .govleft{display:flex;align-items:center;gap:8px}.govbar .flag{display:inline-flex;width:18px;height:12px;overflow:hidden;border-radius:2px}.govbar .flag i{flex:1}.govbar .prototype{color:#b8cdf6;background:rgba(184,205,246,.13);border:1px solid rgba(184,205,246,.23);border-radius:999px;padding:3px 8px;font-weight:500}
+  .govbar .govleft{display:flex;align-items:center;gap:8px}.govbar .flag{display:inline-flex;width:18px;height:12px;overflow:hidden;border-radius:2px}.govbar .flag i{flex:1}
   header.site{background:color-mix(in srgb,var(--surface) 91%,transparent);backdrop-filter:blur(16px);border-bottom:0}
   header.site::after{height:2px;opacity:.75}
   header.site .wrap{min-height:72px}.brand .txt b{font-family:var(--display);font-size:21px;letter-spacing:-.025em}.emblem{width:43px;height:43px}
@@ -895,6 +895,21 @@
   :root[data-theme="dark"]{--md-primary:#adc6ff;--md-on-primary:#002e6b;--md-primary-container:#1a488f;--md-on-primary-container:#d8e2ff;--md-secondary:#86d1d6;--md-secondary-container:#004f53;--md-on-secondary-container:#b4ebef;--md-surface:#111318;--md-sc-lowest:#0c0e13;--md-sc-low:#191c20;--md-sc:#1d2024;--md-sc-high:#282a2f;--md-on-surface:#e2e2e6;--md-on-surface-variant:#c4c7cf;--md-outline-variant:#44474e;--slab:#071a36;--slab-2:#123c75} :root[data-theme="dark"] body{background:linear-gradient(180deg,#121820,#101318 100%)}
   @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--md-primary:#adc6ff;--md-on-primary:#002e6b;--md-primary-container:#1a488f;--md-on-primary-container:#d8e2ff;--md-secondary:#86d1d6;--md-secondary-container:#004f53;--md-on-secondary-container:#b4ebef;--md-surface:#111318;--md-sc-lowest:#0c0e13;--md-sc-low:#191c20;--md-sc:#1d2024;--md-sc-high:#282a2f;--md-on-surface:#e2e2e6;--md-on-surface-variant:#c4c7cf;--md-outline-variant:#44474e;--slab:#071a36;--slab-2:#123c75} :root:not([data-theme="light"]) body{background:linear-gradient(180deg,#121820,#101318 100%)}}
   @media(max-width:760px){.govbar .govright{display:none}.govbar .wrap{justify-content:center}.hero .wrap{padding-top:38px}.hero h1{font-size:32px}.section{padding:46px 0}.section.paper2 .wrap{border-radius:22px}.emg{max-width:100%;border-radius:0}.emg .wrap{padding:28px 22px}.card{padding:20px}}
+  /* ===== Civic service rework: function first, decoration second ===== */
+  :root{--radius:14px;--radius-sm:10px;--maxw:1180px;--e1:0 1px 2px rgba(20,32,54,.08);--e2:0 3px 8px rgba(20,32,54,.10);--e3:0 8px 20px rgba(20,32,54,.12)}
+  body{background:var(--md-surface);font-size:16px}.wrap{padding-left:24px;padding-right:24px}h1,h2,h3,h4,.brand .txt b{font-family:var(--ui);letter-spacing:-.015em}h1{font-weight:700}.reveal{opacity:1;transform:none;transition:none}.view{animation:none}.heroload,.fab{animation:none!important}
+  .govbar{background:#0b2450;color:#e8efff}.govbar .wrap{min-height:32px}.govbar .govright{color:#cbd9f2}
+  header.site{background:var(--md-sc-lowest);backdrop-filter:none;border-bottom:1px solid var(--md-outline-variant)}header.site::after{height:3px;opacity:1}header.site .wrap{min-height:68px}.brand{gap:11px}.brand .txt b{font-size:20px}.brand .txt span{font-size:12px}.emblem{width:40px;height:40px}
+  .hbtns{gap:8px}.langsel{border:1px solid var(--md-outline-variant);background:var(--md-sc-lowest);border-radius:10px;padding:2px}.langsel button{min-height:32px;padding:5px 9px;border-radius:8px}.ico.utility{width:auto;min-width:44px;padding:0 10px;gap:6px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--md-outline-variant);background:var(--md-sc-lowest);font-size:13px;font-weight:500;border-radius:10px}.ico.utility .material-symbols-rounded{font-size:19px}.login-btn{height:42px;border-radius:10px;padding:0 16px;box-shadow:none;font-size:14px}.login-btn .material-symbols-rounded{font-size:19px}
+  nav.main{position:relative;background:var(--md-sc-lowest);backdrop-filter:none;border-bottom:1px solid var(--md-outline-variant)}nav.main .wrap{min-height:52px;gap:5px}nav.main a.nl{border-radius:8px;padding:8px 13px}nav.main a.nl.active{background:var(--md-primary-container);color:var(--md-on-primary-container)}
+  .home-hero{position:relative;overflow:hidden;background:#103d79;color:#fff;border-bottom:3px solid #138808}.home-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#ff9933 0 33.333%,#fff 33.333% 66.666%,#138808 66.666%)}.home-hero .skyline{height:132px;opacity:.48;mask-image:linear-gradient(to top,#000 48%,transparent);-webkit-mask-image:linear-gradient(to top,#000 48%,transparent)}.home-hero .wrap{position:relative;z-index:2;padding-top:46px;padding-bottom:145px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(420px,.9fr);gap:56px;align-items:start}.hero-kicker{display:flex;align-items:center;gap:8px;color:#dbe7ff;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.hero-kicker .flag{display:inline-flex;width:18px;height:12px;border-radius:2px;overflow:hidden}.hero-kicker .flag i{flex:1}.home-hero h1{font-size:clamp(32px,4vw,46px);line-height:1.12;max-width:15ch;margin:14px 0 10px}.home-hero .sub{font-size:17px;line-height:1.55;color:#dbe7ff;max-width:52ch}.service-hub{background:#fff;color:#1a1b20;border-radius:14px;padding:8px;box-shadow:0 4px 10px rgba(0,0,0,.15)}.service-hub .hub-label{font-size:13px;font-weight:700;color:#44474f;padding:8px 10px 10px}.service-actions{display:grid;grid-template-columns:1fr 1fr;gap:4px}.service-action{min-height:82px;width:100%;border:1px solid transparent;border-radius:10px;padding:11px;text-align:left;background:#f5f7fc;color:#1a1b20;display:grid;grid-template-columns:32px 1fr;align-items:center;gap:9px;font-family:var(--ui)}.service-action:hover{background:#e9efff;border-color:#b9c7e4}.service-action.primary{background:#174ea6;color:#fff}.service-action .material-symbols-rounded{font-size:23px}.service-action b{font-size:14px;display:block;line-height:1.25}.service-action > span:last-child{display:block;color:#1a1b20}.service-action > span:last-child span{display:block;font-size:12px;line-height:1.25;margin-top:2px;color:#5a5d65}.service-action.primary > span:last-child{color:#fff}.service-action.primary > span:last-child span{color:#dbe7ff}
+  .emg{max-width:none;margin:0;background:#fff4f2;color:#3f1110;border-bottom:1px solid #f1bbb7;border-radius:0}.emg .wrap{padding:24px;grid-template-columns:1fr auto}.emg .etag{color:#8b1e18;background:#ffe0dc;border-color:#f3bbb6}.emg h2{font-family:var(--ui);font-size:25px;line-height:1.2;margin-top:10px}.emg p{color:#5d3c3a;max-width:62ch}.emg .ecall{background:#fff;border:1px solid #f1bbb7;border-radius:12px;padding:14px 18px}.emg .ecall .enum{font-family:var(--ui);color:#9a241f;font-size:38px}.emg .ecall .elbl{color:#6a4a47}.emg .esteps{margin-top:12px}.emg .estep{color:#5d3c3a;background:#fff;border-color:#efc8c4}.emg .estep b{color:#9a241f}
+  .section{padding:56px 0}.section.paper2 .wrap{padding-top:0;padding-bottom:0;background:transparent;border-radius:0}.section.paper2{background:var(--md-sc-low)}.lead{margin-bottom:24px!important}.lead h2{font-size:28px;line-height:1.25;letter-spacing:-.015em}.lead p{font-size:16px;line-height:1.55}.eyebrow{font-size:12px;letter-spacing:.09em}.actlist{gap:12px}.actrow{border:1px solid var(--md-outline-variant);border-radius:12px;padding:16px;background:var(--md-sc-lowest);box-shadow:none}.actrow:hover{transform:none;border-color:var(--md-primary);box-shadow:var(--e1)}.actrow .ai{width:40px;height:40px;border-radius:10px}.searchbar{border-radius:12px;box-shadow:none}.searchbar .btn{border-radius:8px}.exchip{border-radius:999px}
+  .card,.panel{border:1px solid var(--md-outline-variant);border-radius:14px;box-shadow:none}.card{padding:24px}.page{padding:32px 0 60px}.page .head{background:#e6edff;color:#0c2d62;border-radius:14px;padding:26px;margin-bottom:20px}.page .head::before,.page .head::after{display:none}.page .head h1{color:#0c2d62;font-size:32px}.page .head p{color:#3f4d65}.page .head .breadcrumb{color:#58657b}.page .head .breadcrumb a{color:#174ea6}.page .head .btn.primary{background:#174ea6;color:#fff}
+  .btn{height:42px;border-radius:9px;box-shadow:none;font-weight:600}.btn.ghost{border-radius:9px}.btn.lg{height:48px;border-radius:10px}.fab{border-radius:12px;box-shadow:var(--e2)}.slab{border-radius:14px}.journey-card{box-shadow:none}.metro-h .mh-node{border:2px solid var(--md-outline-variant);box-shadow:none}.metro-h .mh-t{font-family:var(--ui);font-size:15px}.ptabs,.subtabs{border-radius:10px}.ptab,.subtab{border-radius:7px}.faq details,.lcard,.rc{border-radius:12px}.field input,.field textarea,.field select{border-radius:8px}.stepper{border-radius:10px}
+  footer.site{margin-top:0;background:#0b2450;border-top:3px solid #138808}.home-hero + .emg{margin-top:0}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:22px}.home-hero .wrap{padding-bottom:135px}.service-hub{max-width:620px}.utility span:last-child{display:none}.ico.utility{padding:0;width:42px}.emg .wrap{grid-template-columns:1fr}.emg .ecall{width:max-content}}
+  @media(max-width:600px){.wrap{padding-left:16px;padding-right:16px}.govbar .wrap{justify-content:flex-start;font-size:11px}.govbar .govright{display:none}header.site .wrap{min-height:64px}.brand .txt span{display:none}.hbtns{gap:5px}.langsel button{padding:5px 7px}.login-btn{width:42px;padding:0;justify-content:center}.login-btn span:last-child{display:none}.home-hero .wrap{padding-top:34px;padding-bottom:118px}.home-hero .skyline{height:104px}.home-hero h1{font-size:31px}.home-hero .sub{font-size:16px}.service-actions{grid-template-columns:1fr}.service-action{min-height:58px;grid-template-columns:30px 1fr}.emg .wrap{padding:22px 16px}.emg .ecall{width:100%}.section{padding:42px 0}.lead h2{font-size:25px}.page .head{padding:22px}.page .head h1{font-size:28px}}
 </style>
 </head>
 <body>
@@ -902,7 +917,7 @@
 <div class="govbar">
   <div class="wrap">
     <span class="govleft"><span class="flag" aria-hidden="true"><i style="background:#ff9933"></i><i style="background:#fff"></i><i style="background:#138808"></i></span> CyberSetu citizen service</span>
-    <span class="govright"><span class="prototype">Independent prototype</span></span>
+    <span class="govright">A digital public-service experience for safer online India</span>
   </div>
 </div>
 
@@ -924,9 +939,9 @@
         <button data-lang="hi" aria-pressed="false">हिं</button>
         <button data-lang="kn" aria-pressed="false">ಕನ್ನಡ</button>
       </div>
-      <button class="ico" id="access" aria-label="Accessibility options" title="Accessibility">A</button>
-      <button class="ico" id="theme" aria-label="Toggle theme" title="Theme">☾</button>
-      <button class="login-btn" data-nav="track"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> <span data-i="login">Sign in</span></button>
+      <button class="ico utility" id="access" aria-label="Accessibility options" title="Accessibility"><span class="material-symbols-rounded" aria-hidden="true">accessibility_new</span><span>Accessibility</span></button>
+      <button class="ico utility" id="theme" aria-label="Toggle theme" title="Theme"><span class="material-symbols-rounded" aria-hidden="true">dark_mode</span><span>Theme</span></button>
+      <button class="login-btn" data-nav="report"><span class="material-symbols-rounded" aria-hidden="true">report</span> <span>Report cybercrime</span></button>
     </div>
   </div>
 </header>
@@ -1438,18 +1453,18 @@ function vHome(){
  var lcard=function(color,tag,h,p){return '<button class="lcard reveal" data-nav="learn"><div class="lc-top" style="background:'+color+'">'+IC.shieldw+'</div><div class="lc-in"><div class="lc-tag">'+tag+'</div><h3>'+h+'</h3><p>'+p+'</p></div></button>';};
  var faqs=[["q1","a1"],["q2","a2"],["q3","a3"],["q4","a4"]].map(function(f){return '<details><summary>'+t(f[0])+'</summary><div class="a">'+t(f[1])+'</div></details>';}).join("");
  return '<div class="view">'+
-  /* HERO — national band with Indian monuments skyline + quick actions */
-  '<header class="hero">'+SKYLINE+'<div class="wrap">'+
-    '<div class="eyebrow"><span class="tri"><i style="background:#FF9933"></i><i style="background:#fff"></i><i style="background:#138808"></i></span> CyberSetu · Cyber-safety for India</div>'+
-    '<h1>Report a cybercrime</h1>'+
-    '<p class="sub">Get help, submit evidence and follow your case from report to resolution.</p>'+
-    '<div class="quickgrid">'+
-      '<button class="qa solid" data-nav="report"><span class="qai">'+IC.report+'</span><span class="qat"><b>Report a cybercrime</b><span>Start a new complaint</span></span><span class="qgo">'+ARR+'</span></button>'+
-      '<button class="qa" data-nav="track"><span class="qai">'+IC.track+'</span><span class="qat"><b>Track my case</b><span>Check status and updates</span></span><span class="qgo">'+ARR+'</span></button>'+
-      '<button class="qa" data-nav="suspect"><span class="qai">'+IC.suspect+'</span><span class="qat"><b>Check a suspect</b><span>A number, UPI ID or link</span></span><span class="qgo">'+ARR+'</span></button>'+
-      '<button class="qa" data-nav="help"><span class="qai">'+IC.help+'</span><span class="qat"><b>Get help</b><span>Contact and guidance</span></span><span class="qgo">'+ARR+'</span></button>'+
-    '</div>'+
-  '</div></header>'+
+  /* Service-first home: the shared citizen tasks are visible without scrolling. */
+  '<header class="home-hero">'+SKYLINE+'<div class="wrap"><div class="hero-grid">'+
+    '<div><div class="hero-kicker"><span class="flag"><i style="background:#FF9933"></i><i style="background:#fff"></i><i style="background:#138808"></i></span> CyberSetu · cyber safety for India</div>'+
+      '<h1>Report a cybercrime</h1>'+
+      '<p class="sub">Get help, submit evidence and follow your case from report to resolution.</p></div>'+
+    '<div class="service-hub" aria-label="Citizen services"><div class="hub-label">What do you need to do?</div><div class="service-actions">'+
+      '<button class="service-action primary" data-nav="report"><span class="material-symbols-rounded" aria-hidden="true">report</span><span><b>Report a cybercrime</b><span>Start a new complaint</span></span></button>'+
+      '<button class="service-action" data-nav="track"><span class="material-symbols-rounded" aria-hidden="true">manage_search</span><span><b>Track my case</b><span>Check status and updates</span></span></button>'+
+      '<button class="service-action" data-nav="suspect"><span class="material-symbols-rounded" aria-hidden="true">policy</span><span><b>Check a suspect</b><span>Number, UPI ID or link</span></span></button>'+
+      '<button class="service-action" data-nav="help"><span class="material-symbols-rounded" aria-hidden="true">support_agent</span><span><b>Get help</b><span>Guidance and contact options</span></span></button>'+
+    '</div></div></div>'+
+  '</div></div></header>'+
   /* EMERGENCY */
   '<section class="emg"><div class="wrap">'+
     '<div><span class="etag">'+IC.phone+' If money was just taken</span>'+
@@ -1989,7 +2004,7 @@ function vAdminLive(){
      '<div class="panel"><div class="panel-b" style="padding:6px 16px"><ul class="afeed" id="lmActivity"></ul></div></div>'+
      '<div class="panel" style="margin-top:16px"><div class="panel-h"><h3>Reports per minute</h3><span class="sp"></span><span class="cnt" id="lmRpm">—</span></div><div class="panel-b"><canvas id="lmCanvas" style="width:100%;height:120px;display:block"></canvas></div></div>'+
    '</div></div>'+
-   '<p class="muted" style="font-size:12px;margin-top:14px">Intake shown here is simulated demo data for this prototype, not live national data.</p>');
+   '<p class="muted" style="font-size:12px;margin-top:14px">Intake shown here uses sample operational data for the experience, not live national data.</p>');
 }
 function reduceMotion(){return window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;}
 var _mon={timers:[]};
@@ -2191,7 +2206,7 @@ document.addEventListener("click",function(e){
  var act=b.getAttribute("data-act");
  if(act==="adminLogin"){ go("adminLogin"); return; }
  if(act==="offSignin"){ state.officer=OFFICER; go("admin_dash"); return; }
- if(act==="toggleTheme"){ var dd=!curDark(); document.documentElement.setAttribute("data-theme",dd?"dark":"light"); themeBtn.textContent=dd?"☀":"☾"; render(); return; }
+ if(act==="toggleTheme"){ var dd=!curDark(); document.documentElement.setAttribute("data-theme",dd?"dark":"light"); updateThemeButton(); render(); return; }
  if(act==="addNote"){ var nb=document.getElementById("noteBox"); var id=b.getAttribute("data-id"); if(nb&&nb.value.trim()){ if(!state.auditLog)state.auditLog={}; if(!state.auditLog[id])state.auditLog[id]=[]; state.auditLog[id].push({t:nb.value.trim(),w:"just now · "+OFFICER.name}); render(); toast("Note added to case log"); } else toast(t("need")); return; }
  if(act==="admFreeze"){ var fid=b.getAttribute("data-id"); var fc=findQ(fid); if(fc){ fc.frozen=fc.amount||fc.frozen; if(!state.auditLog)state.auditLog={}; if(!state.auditLog[fid])state.auditLog[fid]=[]; state.auditLog[fid].push({t:"Bank freeze request sent"+(fc.amount?" for "+inr(fc.amount):""),w:"just now · "+OFFICER.name}); render(); toast(t("toast_freeze")); } return; }
  if(act==="admAssign"){ var aid=b.getAttribute("data-id"); var acs=findQ(aid); if(acs){ acs.officer=OFFICER.name; if(!state.auditLog)state.auditLog={}; if(!state.auditLog[aid])state.auditLog[aid]=[]; state.auditLog[aid].push({t:"Assigned to "+OFFICER.name,w:"just now · supervisor"}); render(); toast("Case assigned to you"); } return; }
@@ -2268,8 +2283,9 @@ function applyStatic(){ document.querySelectorAll("[data-i]").forEach(function(e
 /* theme */
 var themeBtn=document.getElementById("theme");
 function curDark(){var ex=document.documentElement.getAttribute("data-theme"); if(ex)return ex==="dark"; return window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches;}
-themeBtn.addEventListener("click",function(){var d=!curDark();document.documentElement.setAttribute("data-theme",d?"dark":"light");themeBtn.textContent=d?"☀":"☾";});
-themeBtn.textContent=curDark()?"☀":"☾";
+function updateThemeButton(){var dark=curDark();themeBtn.innerHTML='<span class="material-symbols-rounded" aria-hidden="true">'+(dark?"light_mode":"dark_mode")+'</span><span>'+ (dark?"Light":"Theme") +'</span>';}
+themeBtn.addEventListener("click",function(){var d=!curDark();document.documentElement.setAttribute("data-theme",d?"dark":"light");updateThemeButton();});
+updateThemeButton();
 
 /* accessibility panel — text size + high contrast, for all audiences */
 var accBtn=document.getElementById("access"), accBar=document.getElementById("accbar"), accScale=1;

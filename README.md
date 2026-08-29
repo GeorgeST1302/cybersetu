@@ -4,7 +4,7 @@ A concept redesign of India's cyber-fraud reporting experience — a citizen por
 
 It's a **single self-contained page**: plain HTML + CSS + vanilla JavaScript. The visual system has been refreshed with a calmer Material 3-inspired layout, responsive surfaces, and accessible light/dark themes. Fonts load from Google Fonts, so keep an internet connection the first time.
 
-> This is an independent concept/prototype, not an official Government of India service.
+> Built for Build What Moves India. Case data and live-monitor activity are simulated for the experience.
 
 ---
 
@@ -74,7 +74,7 @@ To reach the **officer command center**: open the site, scroll to the footer and
 
 ## Notes
 
-- This is an independent **concept/prototype**, not the official cybercrime.gov.in service. All case data, suspect reports, and the live monitor use clearly-simulated demo data.
+- This is a Build What Moves India competition experience. All case data, suspect reports, and live-monitor activity are clearly simulated.
 - Language (EN / हिंदी / ಕನ್ನಡ), light/dark theme, and the accessibility text-size / high-contrast controls are in the header.
 - If you later want the production stack (Astro + React + Material UI + Supabase), this page is the reference implementation to port screen by screen.
 
