@@ -43,24 +43,17 @@ function renderGate() {
         <form id="gateForm">
           <div class="field" style="margin-bottom:1rem">
             <label for="badge">Officer ID</label>
-            <input id="badge" type="text" placeholder="e.g. KA-CYB-4471" autocomplete="off">
+            <input id="badge" type="text" value="KA-CYB-4471" autocomplete="off">
           </div>
           <div class="field" style="margin-bottom:1.25rem">
             <label for="pass">Access code</label>
-            <input id="pass" type="password" placeholder="••••••" autocomplete="current-password">
+            <input id="pass" type="text" value="cyber" autocomplete="off">
             <span class="err" id="gateErr" hidden></span>
           </div>
           <button class="btn block lg" type="submit">
             Sign in <span class="arw">${ICON.arrow}</span>
           </button>
         </form>
-
-        <div class="demo-creds">
-          <b>Access for review:</b> any Officer ID with the code <code>cyber</code>.
-          <button type="button" class="btn sm soft" id="gateFill" style="margin-top:.7rem">
-            Fill it in for me
-          </button>
-        </div>
 
         <a class="btn plain" href="index.html" style="margin-top:1rem">← Back to the citizen service</a>
       </div>
@@ -92,13 +85,6 @@ function renderGate() {
 
   $('#gateForm').addEventListener('submit', e => { e.preventDefault(); attempt(); });
   $('#pass').addEventListener('input', () => { err.hidden = true; });
-
-  $('#gateFill').addEventListener('click', () => {
-    $('#badge').value = 'KA-CYB-4471';
-    $('#pass').value = 'cyber';
-    err.hidden = true;
-    attempt();
-  });
 }
 
 /* --------------------------------------------------------------------------
